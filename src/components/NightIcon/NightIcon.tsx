@@ -108,17 +108,15 @@ const NightIconWrapper = styled.div`
 
   @media screen and (max-width: 1200px) {
     .night {
-      width: 15vw;
-      height: 15vw;
+      width: 140px;
+      height: 140px;
       min-height: 115px;
       min-width: 115px;
     }
 
     .moon {
-      width: 8vw;
-      height: 8vw;
-      min-height: 60px;
-      min-width: 60px;
+      width: 68px;
+      height: 68px;
     }
   }
 `;

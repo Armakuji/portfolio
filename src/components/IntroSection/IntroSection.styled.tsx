@@ -2,20 +2,22 @@ import styled from "styled-components";
 import IntroBackGround from "utils/images/intro_background1.png";
 
 export const IntroContrainer = styled.div`
-  height: 72vh;
+  height: 65vh;
   // background-image: url(${IntroBackGround});
   // background-repeat: no-repeat;
   // background-size: cover;
   // background-position: center;
-  background-color: transparent;
 
   // @media screen and (max-width: 1024px) {
   //   background-position: right;
   //   height: fit-content;
   // }
 
+  background-color: transparent;
+  max-height: 720px;
+
   @media (max-width: 570px) {
-    height: 85vh;
+    height: 78vh;
   }
 `;
 
@@ -31,7 +33,7 @@ export const ContentWrapper = styled.div`
 
   display: flex;
   justify-content: center;
-  margin-top: 18vh;
+  margin-top: 15vh;
 
   @media (max-width: 570px) {
     margin-top: 5vh;
@@ -45,7 +47,7 @@ export const Content = styled.div`
   line-height: 1.5;
 
   h1 {
-    font-size: 3.2rem;
+    font-size: 2.4rem;
     color: #151418;
     opacity: 0.98;
     font-weight: bold;
@@ -53,7 +55,7 @@ export const Content = styled.div`
   }
 
   h2 {
-    font-size: 2.8em;
+    font-size: 2.2em;
     font-weight: bold;
     opacity: 0.8;
     font-family: proxima-nova;
@@ -64,7 +66,7 @@ export const Content = styled.div`
   p {
     word-wrap: break-word;
     margin-top: 0.5em;
-    font-size: 2em;
+    font-size: 1.8em;
     color: #151418;
   }
 
@@ -72,15 +74,20 @@ export const Content = styled.div`
     min-width: 375px;
   }
 
-  @media screen and (max-width: 1200px) {
+  @media (max-width: 770px) {
     text-align: center;
     -webkit-box-align: center;
     align-items: center;
     margin-bottom: 2rem;
     max-width: 560px;
+
+    .description-box {
+      max-width: 460px;
+      display: inline-block;
+    }
   }
 
-  @media screen and (min-width: 992px) {
+  @media (min-width: 992px) {
     max-width: 960px;
   }
 
@@ -88,12 +95,8 @@ export const Content = styled.div`
     max-width: 540px;
   }
 
-  @media (min-width: 760px) {
+  @media (min-width: 770px) {
     max-width: 720px;
-  }
-
-  @media (min-width: 990px) {
-    max-width: 960px;
   }
 
   @media (max-width: 375px) {
