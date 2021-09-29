@@ -6,24 +6,25 @@ const AboutSectionWrapper = styled.div`
   background-color: transparent;
   min-height: 400px;
   min-width: 375px;
-  letter-spacing: 0.05em;
-  margin-top: 3rem;
-  padding-bottom: 2rem;
-  padding-right: 2em;
-  padding-left: 2em;
+  margin-top: 4em;
+  padding-right: 1rem;
+  padding-left: 1rem;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  letter-spacing: 0.05em;
 
   .card {
-    width: 100%;
-
     .ant-card-body {
       padding: 2em;
       font-size: 1.4em;
     }
 
-    @media (min-width: 460px) {
-      padding: 3em;
+    @media (min-width: 576px) {
+      max-width: 540px;
+    }
+
+    @media (min-width: 770px) {
+      max-width: 840px;
     }
   }
 

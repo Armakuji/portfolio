@@ -65,7 +65,7 @@ const NavBarWrapper = styled.div`
     font-size: 1.4em;
   }
 
-  @media (max-width: 760px) {
+  @media (max-width: 767px) {
     .menu {
       display: none;
     }

@@ -2,7 +2,6 @@ import styled from "styled-components";
 import IntroBackGround from "utils/images/intro_background1.png";
 
 export const IntroContrainer = styled.div`
-  height: 65vh;
   // background-image: url(${IntroBackGround});
   // background-repeat: no-repeat;
   // background-size: cover;
@@ -13,8 +12,8 @@ export const IntroContrainer = styled.div`
   //   height: fit-content;
   // }
 
+  // max-height: 560px;
   background-color: transparent;
-  max-height: 720px;
 
   @media (max-width: 570px) {
     height: 78vh;
@@ -26,18 +25,11 @@ export const ContentWrapper = styled.div`
   min-height: 400px;
   min-width: 375px;
   letter-spacing: 0.04em;
-  padding-top: 3rem;
-  padding-bottom: 2rem;
-  padding-right: 4vw;
-  padding-left: 4vw;
-
   display: flex;
   justify-content: center;
-  margin-top: 15vh;
 
-  @media (max-width: 570px) {
-    margin-top: 5vh;
-  }
+  padding-bottom: 15vmax;
+  padding-top: 15vmax;
 `;
 
 export const Content = styled.div`
@@ -74,43 +66,46 @@ export const Content = styled.div`
     min-width: 375px;
   }
 
-  @media (max-width: 770px) {
+  .description-box {
+    display: inline-block;
+  }
+
+  @media (max-width: 767px) {
     text-align: center;
     -webkit-box-align: center;
     align-items: center;
     margin-bottom: 2rem;
     max-width: 560px;
-
-    .description-box {
-      max-width: 460px;
-      display: inline-block;
-    }
   }
 
   @media (min-width: 992px) {
     max-width: 960px;
   }
 
-  @media (min-width: 570px) {
-    max-width: 540px;
-  }
-
   @media (min-width: 770px) {
-    max-width: 720px;
+    max-width: 840px;
+
+    .description-box {
+      width: 540px;
+    }
+
+    p {
+      max-width: 460px;
+    }
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 768px) {
     h1 {
       font-size: 2.8rem;
     }
 
     h2 {
-      font-size: 1.8rem;
+      font-size: 2.2rem;
     }
 
     p {
       word-wrap: break-word;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
   }
 `;

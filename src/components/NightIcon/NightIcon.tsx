@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 const NightIconWrapper = styled.div`
   .night {
-    width: 225px;
-    height: 225px;
+    width: 175px;
+    height: 175px;
     border-radius: 40%;
     z-index: 120;
     position: sticky;
@@ -15,8 +15,8 @@ const NightIconWrapper = styled.div`
     position: absolute;
     top: -10%;
     left: 65%;
-    width: 112px;
-    height: 112px;
+    width: 82px;
+    height: 82px;
     border-radius: 100%;
     background: rgba(255, 241, 118, 1);
     box-shadow: 1px 1px 30px rgba(224, 224, 224, 1);
@@ -106,7 +106,7 @@ const NightIconWrapper = styled.div`
     }
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 760px) {
     .night {
       width: 140px;
       height: 140px;
