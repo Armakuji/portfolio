@@ -1,19 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 import NavBar from "components/NavBar/NavBar";
+import MenuSlider from "components/NavBar/MenuSlider";
 import IntroSection from "components/IntroSection/IntroSection";
+import AboutSection from "components/AboutSection/AboutSection";
 
 const LandingPageWrapper = styled.div`
   -webkit-font-smoothing: auto;
-  background-color: #f7f6f2;
 `;
 
 const LandingPage = () => {
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.screen.width;
+      if (screenWidth >= 760) {
+        setOpenMenu(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+  }, []);
+
   return (
     <LandingPageWrapper>
-      <NavBar />
+      <NavBar setOpenMenu={setOpenMenu} />
+      <MenuSlider openMenu={openMenu} setOpenMenu={setOpenMenu} />
       <IntroSection />
+      <AboutSection />
     </LandingPageWrapper>
   );
 };
