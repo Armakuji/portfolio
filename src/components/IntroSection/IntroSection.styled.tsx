@@ -27,9 +27,8 @@ export const ContentWrapper = styled.div`
   letter-spacing: 0.04em;
   display: flex;
   justify-content: center;
-
-  padding-bottom: 15vmax;
   padding-top: 15vmax;
+  padding-bottom: 12vmax;
 `;
 
 export const Content = styled.div`
@@ -37,9 +36,9 @@ export const Content = styled.div`
   align-items: center;
   justify-content: center;
   line-height: 1.5;
+  padding: 0 2em;
 
   h1 {
-    font-size: 2.4rem;
     color: #151418;
     opacity: 0.98;
     font-weight: bold;
@@ -47,7 +46,6 @@ export const Content = styled.div`
   }
 
   h2 {
-    font-size: 2.2em;
     font-weight: bold;
     opacity: 0.8;
     font-family: proxima-nova;
@@ -58,12 +56,12 @@ export const Content = styled.div`
   p {
     word-wrap: break-word;
     margin-top: 0.5em;
-    font-size: 1.8em;
+
     color: #151418;
   }
 
   .ant-row {
-    min-width: 375px;
+    min-width: 100%;
   }
 
   .description-box {
@@ -78,34 +76,35 @@ export const Content = styled.div`
     max-width: 560px;
   }
 
-  @media (min-width: 992px) {
-    max-width: 960px;
-  }
-
-  @media (min-width: 770px) {
-    max-width: 840px;
-
-    .description-box {
-      width: 540px;
-    }
-
-    p {
-      max-width: 460px;
-    }
-  }
-
-  @media (max-width: 768px) {
+  @media (min-width: 375px) {
     h1 {
-      font-size: 2.8rem;
+      font-size: 2.4rem;
     }
 
     h2 {
-      font-size: 2.2rem;
+      font-size: 2rem;
     }
 
     p {
       word-wrap: break-word;
       font-size: 1.4rem;
+    }
+  }
+
+  @media (min-width: 800px) {
+    width: 960px;
+
+    h1 {
+      font-size: 2.8rem;
+    }
+
+    h2 {
+      font-size: 2.2em;
+    }
+
+    p {
+      max-width: 460px;
+      font-size: 1.8em;
     }
   }
 `;

@@ -14,18 +14,15 @@ const IntroSection = () => {
     <IntroContrainer>
       <ContentWrapper>
         <Content>
-          <Row justify="center" align="middle" gutter={[40, 40]}>
-            <Col xs={24} md={16}>
+          <Row justify="center" align="middle" gutter={[20, 20]}>
+            <Col xs={24} md={14}>
               <div className="description-box">
                 <h1>Hi there. I'm Nitipon</h1>
-                <h2>Frontend Developer</h2>
-                <p>
-                  I design and code beautifully simple things, and I love what I
-                  do.
-                </p>
+                <h2>Software Engineer 🧑‍💻</h2>
+                <p>I am a software engineer with a focus on the frontend</p>
               </div>
             </Col>
-            <Col xs={24} md={8}>
+            <Col xs={24} md={10}>
               <IconWrapper>
                 <NightIcon />
               </IconWrapper>
