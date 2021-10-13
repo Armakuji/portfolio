@@ -2,21 +2,22 @@ import styled from "styled-components";
 
 export const IntroContrainer = styled.div`
   background-color: #221b47;
-
-  @media (max-width: 570px) {
-    height: 78vh;
-  }
 `;
 
 export const ContentWrapper = styled.div`
   background-color: transparent;
-  min-height: 400px;
+  min-height: 450px;
   min-width: 375px;
   letter-spacing: 0.04em;
   display: flex;
   justify-content: center;
-  padding-top: 20vmax;
-  padding-bottom: 14vmax;
+  padding-top: 25vmax;
+  padding-bottom: 25vmax;
+
+  @media (min-width: 560px) {
+    padding-top: 25vmax;
+    padding-bottom: 25vmax;
+  }
 `;
 
 export const Content = styled.div`
@@ -26,6 +27,10 @@ export const Content = styled.div`
   line-height: 1.5;
   padding: 0 2em;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  .blue {
+    color: #7b79f7;
+  }
 
 
   h1 {
@@ -37,7 +42,6 @@ export const Content = styled.div`
 
   h2 {
     font-weight: bold;
-    opacity: 0.8;
     color: white;
     margin-bottom: 0;
   }

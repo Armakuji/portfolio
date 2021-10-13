@@ -15,7 +15,8 @@ const AboutContainer = styled.div`
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 
   .card {
-    margin: 0.5em auto;
+    margin: 0.5em 0.25rem;
+    width: 95%;
 
     .ant-card-body {
       font-size: 1.4em;
@@ -68,7 +69,7 @@ const AboutContainer = styled.div`
 
   @media (min-width: 1100px) {
     .about {
-      max-width: 85%;
+      // max-width: 85%;
     }
 
     .ant-row {
@@ -82,6 +83,10 @@ const AboutContainer = styled.div`
 
   .bold {
     font-weight: bold;
+  }
+
+  .blue {
+    color: #7b79f7;
   }
 
   .about {
@@ -114,7 +119,7 @@ const AboutSection = () => {
   return (
     <AboutContainer>
       <Card className="card">
-        <div className="title">
+        <div className="title ">
           <h1>About Me</h1>
         </div>
         <Row align="middle" justify="center" gutter={[20, 40]}>
@@ -124,10 +129,12 @@ const AboutSection = () => {
           <Col xs={24} md={12}>
             <div className="about">
               <div>
-                &ldquo; My name is <label className="bold">Nitipon</label>. I
+                &ldquo; My name is{" "}
+                <label className="bold blue">Nitipon Chingthongchai</label>. I
                 like to think, analyze, and solve problems. So I really like
                 coding.
               </div>
+              <br />
               <div>
                 I like to create beautiful things on the Web. And now I'm
                 studying Ethereum smart contracts, Blockchain, and Decentralized

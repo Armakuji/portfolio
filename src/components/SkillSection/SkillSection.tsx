@@ -16,6 +16,7 @@ const SkillContainer = styled.div`
 
   .card {
     margin: 0.5em auto;
+    width: 95%;
 
     .ant-card-body {
       font-size: 1.4em;
@@ -52,14 +53,6 @@ const SkillContainer = styled.div`
       50% {
         background-position: 100% 50%;
       }
-    }
-
-    @media (min-width: 576px) {
-      max-width: 540px;
-    }
-
-    @media (min-width: 770px) {
-      max-width: 80vw;
     }
   }
 

@@ -88,16 +88,12 @@ const NavBar: FC<MenuSliderProps> = (props) => {
   const [backgroundColor, setBackgroundColor] = useState<string>("#221b47");
 
   window.onscroll = function () {
-    if (window.pageYOffset === 0) {
+    if (window.pageYOffset <= 10) {
       setIsTop(true);
-    } else {
-      setIsTop(false);
-    }
-
-    if (window.pageYOffset <= 526) {
       setFontColor("white");
       setBackgroundColor("#221b47");
     } else {
+      setIsTop(false);
       setFontColor("black");
       setBackgroundColor("white");
     }
