@@ -1,19 +1,7 @@
 import styled from "styled-components";
-import IntroBackGround from "utils/images/intro_background1.png";
 
 export const IntroContrainer = styled.div`
-  // background-image: url(${IntroBackGround});
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-position: center;
-
-  // @media screen and (max-width: 1024px) {
-  //   background-position: right;
-  //   height: fit-content;
-  // }
-
-  // max-height: 560px;
-  background-color: transparent;
+  background-color: #221b47;
 
   @media (max-width: 570px) {
     height: 78vh;
@@ -27,8 +15,8 @@ export const ContentWrapper = styled.div`
   letter-spacing: 0.04em;
   display: flex;
   justify-content: center;
-  padding-top: 15vmax;
-  padding-bottom: 12vmax;
+  padding-top: 20vmax;
+  padding-bottom: 14vmax;
 `;
 
 export const Content = styled.div`
@@ -37,9 +25,11 @@ export const Content = styled.div`
   justify-content: center;
   line-height: 1.5;
   padding: 0 2em;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
 
   h1 {
-    color: #151418;
+    color: white;
     opacity: 0.98;
     font-weight: bold;
     margin-bottom: 0;
@@ -48,7 +38,7 @@ export const Content = styled.div`
   h2 {
     font-weight: bold;
     opacity: 0.8;
-    color: #151418;
+    color: white;
     margin-bottom: 0;
   }
 
@@ -56,7 +46,7 @@ export const Content = styled.div`
     word-wrap: break-word;
     margin-top: 0.5em;
 
-    color: #151418;
+    color: white;
   }
 
   .ant-row {
@@ -95,7 +85,7 @@ export const Content = styled.div`
     width: 960px;
 
     h1 {
-      font-size: 2.8rem;
+      font-size: 2.6rem;
     }
 
     h2 {

@@ -4,22 +4,23 @@ import { Card, Row, Col } from "antd";
 import ProfileImage from "utils/images/profile_image.png";
 
 const AboutContainer = styled.div`
-  background-color: transparent;
+  z-index: -999;
   min-height: 400px;
   min-width: 375px;
-  margin-top: 4em;
-  padding-bottom: 4em;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding: 4rem 1rem;
   display: flex;
   justify-content: center;
   letter-spacing: 0.05em;
   word-wrap: break-word;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 
   .card {
+    margin: 0.5em auto;
+
     .ant-card-body {
       font-size: 1.4em;
       position: sticky;
+      margin: 1rem 4rem;
     }
 
     --border-width: 3px;
@@ -56,26 +57,22 @@ const AboutContainer = styled.div`
       }
     }
 
-    @media (min-width: 576px) {
-      max-width: 540px;
-    }
+    // @media (min-width: 576px) {
+    //   max-width: 540px;
+    // }
 
-    @media (min-width: 770px) {
-      max-width: 80vw;
-    }
+    // @media (min-width: 770px) {
+    //   max-width: 80vw;
+    // }
   }
 
-  div {
-    margin: 0.5em auto;
-  }
-
-  @media (min-width: 1150px) {
+  @media (min-width: 1100px) {
     .about {
       max-width: 85%;
     }
 
     .ant-row {
-      width: 85%;
+      padding: 1em 2em;
     }
   }
 
@@ -89,6 +86,16 @@ const AboutContainer = styled.div`
 
   .about {
     padding: 0.25em;
+  }
+
+  .ant-row {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ant-col {
+    display: flex;
+    justify-content: center;
   }
 `;
 
@@ -110,7 +117,7 @@ const AboutSection = () => {
         <div className="title">
           <h1>About Me</h1>
         </div>
-        <Row align="middle">
+        <Row align="middle" justify="center" gutter={[20, 40]}>
           <Col xs={24} md={12}>
             <ProfileImageContainer />
           </Col>

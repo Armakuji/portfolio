@@ -1,46 +1,48 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { Row, Col } from "antd";
 import styled from "styled-components";
 import { GrMenu } from "react-icons/gr";
 
-const NavBarWrapper = styled.div`
+interface NavBarProps {
+  isTop: boolean;
+  fontColor: string;
+  backgroundColor: string;
+}
+
+const NavBarWrapper = styled.div<NavBarProps>`
   width: 100%;
-  background: transparent;
-  //   background: rgba(30, 30, 30, 0.5);
-  //   backdrop-filter: blur(1px);
+  background: ${(props) => props.backgroundColor};
+  color: ${(props) => props.fontColor};
+  backdrop-filter: blur(1px);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  box-shadow: ${(props) =>
+    props.isTop
+      ? "unset;"
+      : "0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);"}
 
   padding-right: 4vw;
   padding-left: 4vw;
   display: flex;
   justify-content: center;
+  position: fixed;
+  z-index: 999;
+    
 
   h1 {
     margin-bottom: 0;
     font-size: 1.6em;
+    color: ${(props) => props.fontColor};
   }
 
   .nav {
     width: 100%;
     height: 100%;
-    // max-width: 1024px;
     min-width: 200px;
     font-size: 1.2rem;
-
-    // @media (max-width: 1200px) {
-    //   max-width: 820px;
-    // }
-
-    // @media (max-width: 960px) {
-    //   max-width: 680px;
-    // }
-
-    // @media (max-width: 755px) {
-    //   max-width: 520px;
-    // }
   }
 
   .ant-row {
-    padding: 1em 0;
+    padding: 0.25em 0;
   }
 
   .menu {
@@ -81,8 +83,32 @@ interface MenuSliderProps {
 
 const NavBar: FC<MenuSliderProps> = (props) => {
   const { setOpenMenu } = props;
+  const [isTop, setIsTop] = useState<boolean>(true);
+  const [fontColor, setFontColor] = useState<string>("white");
+  const [backgroundColor, setBackgroundColor] = useState<string>("#221b47");
+
+  window.onscroll = function () {
+    if (window.pageYOffset === 0) {
+      setIsTop(true);
+    } else {
+      setIsTop(false);
+    }
+
+    if (window.pageYOffset <= 526) {
+      setFontColor("white");
+      setBackgroundColor("#221b47");
+    } else {
+      setFontColor("black");
+      setBackgroundColor("white");
+    }
+  };
+
   return (
-    <NavBarWrapper>
+    <NavBarWrapper
+      isTop={isTop}
+      fontColor={fontColor}
+      backgroundColor={backgroundColor}
+    >
       <Row justify="space-between" align="middle" className="nav">
         <Col>
           <h1>Nitipon.eth</h1>
