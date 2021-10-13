@@ -15,7 +15,6 @@ const NavBarWrapper = styled.div`
   justify-content: center;
 
   h1 {
-    font-family: Comic Sans MS;
     margin-bottom: 0;
     font-size: 1.6em;
   }

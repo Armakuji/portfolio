@@ -14,11 +14,46 @@ const AboutContainer = styled.div`
   display: flex;
   justify-content: center;
   letter-spacing: 0.05em;
+  word-wrap: break-word;
 
   .card {
     .ant-card-body {
-      padding: 2em;
       font-size: 1.4em;
+      position: sticky;
+    }
+
+    --border-width: 3px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-width);
+    &::after {
+      position: absolute;
+      content: "";
+      top: calc(-1 * var(--border-width));
+      left: calc(-1 * var(--border-width));
+      z-index: -1;
+      width: calc(100% + var(--border-width) * 2);
+      height: calc(100% + var(--border-width) * 2);
+      background: linear-gradient(
+        60deg,
+        #bf953f,
+        #fcf6ba,
+        #b38728,
+        #fbf5b7,
+        #aa771c
+      );
+      background-size: 300% 300%;
+      background-position: 0 50%;
+      border-radius: calc(2 * var(--border-width));
+      animation: moveGradient 4s alternate infinite;
+    }
+
+    @keyframes moveGradient {
+      50% {
+        background-position: 100% 50%;
+      }
     }
 
     @media (min-width: 576px) {
@@ -26,16 +61,34 @@ const AboutContainer = styled.div`
     }
 
     @media (min-width: 770px) {
-      max-width: 960px;
+      max-width: 80vw;
     }
   }
 
   div {
-    margin: 1em auto;
+    margin: 0.5em auto;
+  }
+
+  @media (min-width: 1150px) {
+    .about {
+      max-width: 85%;
+    }
+
+    .ant-row {
+      width: 85%;
+    }
   }
 
   .title {
     text-align: center;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .about {
+    padding: 0.25em;
   }
 `;
 
@@ -44,10 +97,10 @@ const ProfileImageContainer = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 280px;
-  height: 280px;
-  border-radius: 0.25em;
   box-shadow: 0 1rem 2rem hsl(0 0% 0% / 20%);
+  width: 250px;
+  height: 250px;
+  border-radius: 0.25em;
 `;
 
 const AboutSection = () => {
@@ -57,19 +110,23 @@ const AboutSection = () => {
         <div className="title">
           <h1>About Me</h1>
         </div>
-        <Row justify="center" align="middle">
-          <Col xs={24} md={14}>
-            <div>
-              My name is Nitipon. I like to think, analyze, solve problems. so I
-              very like to write programs.
-            </div>
-            <div>
-              I like to create beautiful things in web. And now I interested in
-              blockchain Technology, Decentralized Finance.
-            </div>
-          </Col>
-          <Col xs={24} md={10}>
+        <Row align="middle">
+          <Col xs={24} md={12}>
             <ProfileImageContainer />
+          </Col>
+          <Col xs={24} md={12}>
+            <div className="about">
+              <div>
+                &ldquo; My name is <label className="bold">Nitipon</label>. I
+                like to think, analyze, and solve problems. So I really like
+                coding.
+              </div>
+              <div>
+                I like to create beautiful things on the Web. And now I'm
+                studying Ethereum smart contracts, Blockchain, and Decentralized
+                finance. &rdquo;
+              </div>
+            </div>
           </Col>
         </Row>
       </Card>

@@ -48,7 +48,6 @@ export const Content = styled.div`
   h2 {
     font-weight: bold;
     opacity: 0.8;
-    font-family: proxima-nova;
     color: #151418;
     margin-bottom: 0;
   }
@@ -61,7 +60,8 @@ export const Content = styled.div`
   }
 
   .ant-row {
-    min-width: 100%;
+    min-width: 70vw;
+}
   }
 
   .description-box {
