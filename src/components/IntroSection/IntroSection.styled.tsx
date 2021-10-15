@@ -14,9 +14,9 @@ export const ContentWrapper = styled.div`
   padding-top: 25vmax;
   padding-bottom: 25vmax;
 
-  @media (min-width: 560px) {
-    padding-top: 25vmax;
-    padding-bottom: 25vmax;
+  @media (min-width: 960px) {
+    padding-top: 20vmax;
+    padding-bottom: 20vmax;
   }
 `;
 

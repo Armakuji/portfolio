@@ -56,7 +56,11 @@ const MenuSlider: FC<MenuSliderProps> = (props) => {
         <div className="close-icon" onClick={() => setOpenMenu(false)}>
           <GrClose />
         </div>
-        <h2>About</h2>
+        <h2>
+          <a href="#about" onClick={() => setOpenMenu(false)}>
+            About
+          </a>
+        </h2>
         <h2>Skills</h2>
         <h2>Works</h2>
         <h2>Contract</h2>

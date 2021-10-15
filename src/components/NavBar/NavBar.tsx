@@ -55,6 +55,10 @@ const NavBarWrapper = styled.div<NavBarProps>`
       cursor: pointer;
     }
   }
+  
+  a{
+      color: ${(props) => props.fontColor};
+    }
 
   .sub-menu:hover {
   }
@@ -107,11 +111,15 @@ const NavBar: FC<MenuSliderProps> = (props) => {
     >
       <Row justify="space-between" align="middle" className="nav">
         <Col>
-          <h1>Nitipon.eth</h1>
+          <h1>
+            <a href="#intro"> Nitipon.eth</a>
+          </h1>
         </Col>
         <Col>
           <div className="menu">
-            <div className="sub-menu">About</div>
+            <div className="sub-menu">
+              <a href="#about">About</a>
+            </div>
             <div className="sub-menu">Skills</div>
             <div className="sub-menu">Works</div>
             <div className="sub-menu">Contract</div>

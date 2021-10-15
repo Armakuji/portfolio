@@ -21,7 +21,7 @@ const AboutContainer = styled.div`
     .ant-card-body {
       font-size: 1.4em;
       position: sticky;
-      margin: 1rem 4rem;
+      margin: 1rem 3rem;
     }
 
     --border-width: 3px;
@@ -86,7 +86,7 @@ const AboutContainer = styled.div`
   }
 
   .blue {
-    color: #7b79f7;
+    color: #bf953f;
   }
 
   .about {
@@ -117,7 +117,7 @@ const ProfileImageContainer = styled.div`
 
 const AboutSection = () => {
   return (
-    <AboutContainer>
+    <AboutContainer id="about">
       <Card className="card">
         <div className="title ">
           <h1>About Me</h1>

@@ -11,7 +11,7 @@ import {
 
 const IntroSection = () => {
   return (
-    <IntroContrainer>
+    <IntroContrainer id="intro">
       <ContentWrapper>
         <Content>
           <Row justify="center" align="middle" gutter={[20, 20]}>
