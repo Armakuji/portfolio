@@ -58,21 +58,9 @@ const AboutContainer = styled.div`
         background-position: 100% 50%;
       }
     }
-
-    // @media (min-width: 576px) {
-    //   max-width: 540px;
-    // }
-
-    // @media (min-width: 770px) {
-    //   max-width: 80vw;
-    // }
   }
 
   @media (min-width: 1100px) {
-    .about {
-      // max-width: 85%;
-    }
-
     .ant-row {
       padding: 1em 2em;
       max-width: 940px;

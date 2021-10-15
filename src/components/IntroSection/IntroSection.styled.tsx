@@ -11,8 +11,7 @@ export const ContentWrapper = styled.div`
   letter-spacing: 0.04em;
   display: flex;
   justify-content: center;
-  padding-top: 21vmax;
-  padding-bottom: 25vmax;
+  height: 100vh;
 `;
 
 export const Content = styled.div`
@@ -26,7 +25,6 @@ export const Content = styled.div`
   .blue {
     color: #7b79f7;
   }
-
 
   h1 {
     color: white;
@@ -50,7 +48,6 @@ export const Content = styled.div`
 
   .ant-row {
     min-width: 70vw;
-}
   }
 
   .description-box {
@@ -94,6 +91,13 @@ export const Content = styled.div`
     p {
       max-width: 460px;
       font-size: 1.8em;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .ant-row {
+      min-width: unset;
+      width: 860px;
     }
   }
 `;

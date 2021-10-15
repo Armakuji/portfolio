@@ -93,6 +93,12 @@ const NavBar: FC<MenuSliderProps> = (props) => {
   const [backgroundColor, setBackgroundColor] = useState<string>("#221b47");
   const scrollDuration = 100;
 
+  const GrMenuColor = styled(GrMenu)`
+    path {
+      stroke: ${fontColor};
+    }
+  `;
+
   window.onscroll = function () {
     if (window.pageYOffset <= 50) {
       setIsTop(true);
@@ -163,7 +169,7 @@ const NavBar: FC<MenuSliderProps> = (props) => {
             </div>
           </div>
           <div className="mobile-menu" onClick={() => setOpenMenu(true)}>
-            <GrMenu />
+            <GrMenuColor />
           </div>
         </Col>
       </Row>
