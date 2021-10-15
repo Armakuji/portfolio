@@ -23,7 +23,7 @@ const SkillContainer = styled.div`
       position: sticky;
     }
 
-    --border-width: 3px;
+    --border-width: 5px;
     position: relative;
     display: flex;
     border-radius: var(--border-width);

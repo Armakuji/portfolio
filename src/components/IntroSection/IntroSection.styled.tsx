@@ -11,13 +11,8 @@ export const ContentWrapper = styled.div`
   letter-spacing: 0.04em;
   display: flex;
   justify-content: center;
-  padding-top: 25vmax;
+  padding-top: 22vmax;
   padding-bottom: 25vmax;
-
-  @media (min-width: 960px) {
-    padding-top: 20vmax;
-    padding-bottom: 20vmax;
-  }
 `;
 
 export const Content = styled.div`

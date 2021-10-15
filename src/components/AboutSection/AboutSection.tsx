@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Card, Row, Col } from "antd";
 import ProfileImage from "utils/images/profile_image.png";
+import FadeInContainer from "components/FadeInContainer/FadeInContainer";
 
 const AboutContainer = styled.div`
   z-index: -999;
@@ -24,7 +25,7 @@ const AboutContainer = styled.div`
       margin: 1rem 3rem;
     }
 
-    --border-width: 3px;
+    --border-width: 5px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -74,6 +75,7 @@ const AboutContainer = styled.div`
 
     .ant-row {
       padding: 1em 2em;
+      max-width: 940px;
     }
   }
 
@@ -122,27 +124,31 @@ const AboutSection = () => {
         <div className="title ">
           <h1>About Me</h1>
         </div>
-        <Row align="middle" justify="center" gutter={[20, 40]}>
-          <Col xs={24} md={12}>
-            <ProfileImageContainer />
-          </Col>
-          <Col xs={24} md={12}>
-            <div className="about">
-              <div>
-                &ldquo; My name is{" "}
-                <label className="bold blue">Nitipon Chingthongchai</label>. I
-                like to think, analyze, and solve problems. So I really like
-                coding.
+        <FadeInContainer>
+          <Row align="middle" justify="center" gutter={[20, 40]}>
+            <Col xs={24} md={12}>
+              <ProfileImageContainer />
+            </Col>
+            <Col xs={24} md={12}>
+              <div className="about">
+                <div>
+                  &ldquo; My name is{" "}
+                  <label className="bold blue">Nitipon Chingthongchai</label>. I
+                  like to think, analyze, and solve problems. So I really like
+                  coding.
+                </div>
+                <br />
+                <div>
+                  <div>
+                    I like to create beautiful things on the Web. And now I'm
+                    studying Ethereum smart contracts, Blockchain, and
+                    Decentralized finance. &rdquo;
+                  </div>
+                </div>
               </div>
-              <br />
-              <div>
-                I like to create beautiful things on the Web. And now I'm
-                studying Ethereum smart contracts, Blockchain, and Decentralized
-                finance. &rdquo;
-              </div>
-            </div>
-          </Col>
-        </Row>
+            </Col>
+          </Row>
+        </FadeInContainer>
       </Card>
     </AboutContainer>
   );
