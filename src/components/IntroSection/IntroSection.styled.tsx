@@ -11,7 +11,7 @@ export const ContentWrapper = styled.div`
   letter-spacing: 0.04em;
   display: flex;
   justify-content: center;
-  padding-top: 22vmax;
+  padding-top: 21vmax;
   padding-bottom: 25vmax;
 `;
 
