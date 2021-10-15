@@ -2,6 +2,7 @@ import React, { FC, useState } from "react";
 import { Row, Col } from "antd";
 import styled from "styled-components";
 import { GrMenu } from "react-icons/gr";
+import { Link } from "react-scroll";
 
 interface NavBarProps {
   isTop: boolean;
@@ -90,6 +91,7 @@ const NavBar: FC<MenuSliderProps> = (props) => {
   const [isTop, setIsTop] = useState<boolean>(true);
   const [fontColor, setFontColor] = useState<string>("white");
   const [backgroundColor, setBackgroundColor] = useState<string>("#221b47");
+  const scrollDuration = 100;
 
   window.onscroll = function () {
     if (window.pageYOffset <= 50) {
@@ -112,17 +114,53 @@ const NavBar: FC<MenuSliderProps> = (props) => {
       <Row justify="space-between" align="middle" className="nav">
         <Col>
           <h1>
-            <a href="#intro"> Nitipon.eth</a>
+            <Link to="intro" spy={true} smooth={true} duration={scrollDuration}>
+              Nitipon.eth
+            </Link>
           </h1>
         </Col>
         <Col>
           <div className="menu">
             <div className="sub-menu">
-              <a href="#about">About</a>
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                duration={scrollDuration}
+              >
+                About
+              </Link>
             </div>
-            <div className="sub-menu">Skills</div>
-            <div className="sub-menu">Works</div>
-            <div className="sub-menu">Contract</div>
+            <div className="sub-menu">
+              <Link
+                to="skills"
+                spy={true}
+                smooth={true}
+                duration={scrollDuration}
+              >
+                skills
+              </Link>
+            </div>
+            <div className="sub-menu">
+              <Link
+                to="works"
+                spy={true}
+                smooth={true}
+                duration={scrollDuration}
+              >
+                Works
+              </Link>
+            </div>
+            <div className="sub-menu">
+              <Link
+                to="contract"
+                spy={true}
+                smooth={true}
+                duration={scrollDuration}
+              >
+                Contract
+              </Link>
+            </div>
           </div>
           <div className="mobile-menu" onClick={() => setOpenMenu(true)}>
             <GrMenu />
