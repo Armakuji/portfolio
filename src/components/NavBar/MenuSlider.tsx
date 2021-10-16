@@ -6,7 +6,8 @@ import { GrClose } from "react-icons/gr";
 
 const MenuSliderWrapper = styled.div`
   .slider {
-    background-color: lightgrey;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(25px);
     position: fixed;
     height: 100%;
     width: 100%;

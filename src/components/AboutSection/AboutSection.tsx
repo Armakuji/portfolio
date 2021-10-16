@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Card, Row, Col } from "antd";
-import ProfileImage from "utils/images/profile_image.png";
+import ProfileImage from "assets/images/profile_image.png";
 import FadeInContainer from "components/FadeInContainer/FadeInContainer";
-
 const AboutContainer = styled.div`
   z-index: -999;
   min-height: 400px;

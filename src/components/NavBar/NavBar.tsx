@@ -3,6 +3,7 @@ import { Row, Col } from "antd";
 import styled from "styled-components";
 import { GrMenu } from "react-icons/gr";
 import { Link } from "react-scroll";
+import { ReactComponent as NavbarIcon } from "assets/svg/navbar_icon.svg";
 
 interface NavBarProps {
   isTop: boolean;
@@ -43,7 +44,7 @@ const NavBarWrapper = styled.div<NavBarProps>`
   }
 
   .ant-row {
-    padding: 0.25em 0;
+    padding: 0.5em 0;
   }
 
   .menu {
@@ -99,6 +100,17 @@ const NavBar: FC<MenuSliderProps> = (props) => {
     }
   `;
 
+  const NavBarIconColor = styled(NavbarIcon)`
+    height: 1em;
+    width: auto;
+    margin-top: 0.5em;
+
+    path {
+      stroke: ${fontColor};
+      fill: ${fontColor};
+    }
+  `;
+
   window.onscroll = function () {
     if (window.pageYOffset <= 50) {
       setIsTop(true);
@@ -119,11 +131,9 @@ const NavBar: FC<MenuSliderProps> = (props) => {
     >
       <Row justify="space-between" align="middle" className="nav">
         <Col>
-          <h1>
-            <Link to="intro" spy={true} smooth={true} duration={scrollDuration}>
-              Nitipon.eth
-            </Link>
-          </h1>
+          <Link to="intro" spy={true} smooth={true} duration={scrollDuration}>
+            <NavBarIconColor />
+          </Link>
         </Col>
         <Col>
           <div className="menu">
