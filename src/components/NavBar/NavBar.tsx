@@ -1,47 +1,50 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { Row, Col } from "antd";
 import styled from "styled-components";
 import { GrMenu } from "react-icons/gr";
+import { Link } from "react-scroll";
+import { ReactComponent as NavbarIcon } from "assets/svg/navbar_icon.svg";
 
-const NavBarWrapper = styled.div`
+interface NavBarProps {
+  isTop: boolean;
+  fontColor: string;
+  backgroundColor: string;
+}
+
+const NavBarWrapper = styled.div<NavBarProps>`
   width: 100%;
-  background: transparent;
-  //   background: rgba(30, 30, 30, 0.5);
-  //   backdrop-filter: blur(1px);
+  background: ${(props) => props.backgroundColor};
+  color: ${(props) => props.fontColor};
+  backdrop-filter: blur(1px);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  box-shadow: ${(props) =>
+    props.isTop
+      ? "unset;"
+      : "0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);"}
 
   padding-right: 4vw;
   padding-left: 4vw;
   display: flex;
   justify-content: center;
+  position: fixed;
+  z-index: 999;
+    
 
   h1 {
-    font-family: Comic Sans MS;
     margin-bottom: 0;
     font-size: 1.6em;
+    color: ${(props) => props.fontColor};
   }
 
   .nav {
     width: 100%;
     height: 100%;
-    // max-width: 1024px;
     min-width: 200px;
     font-size: 1.2rem;
-
-    // @media (max-width: 1200px) {
-    //   max-width: 820px;
-    // }
-
-    // @media (max-width: 960px) {
-    //   max-width: 680px;
-    // }
-
-    // @media (max-width: 755px) {
-    //   max-width: 520px;
-    // }
   }
 
   .ant-row {
-    padding: 1em 0;
+    padding: 0.5em 0;
   }
 
   .menu {
@@ -54,6 +57,10 @@ const NavBarWrapper = styled.div`
       cursor: pointer;
     }
   }
+  
+  a{
+      color: ${(props) => props.fontColor};
+    }
 
   .sub-menu:hover {
   }
@@ -76,27 +83,107 @@ const NavBarWrapper = styled.div`
   }
 `;
 
+interface IconProps {
+  color: string;
+}
+
+const GrMenuColor = styled(GrMenu)<IconProps>`
+  path {
+    stroke: ${(props) => props.color};
+  }
+`;
+
+const NavBarIconColor = styled(NavbarIcon)<IconProps>`
+  height: 1em;
+  width: auto;
+  margin-top: 0.5em;
+
+  path {
+    stroke: ${(props) => props.color};
+    fill: ${(props) => props.color};
+  }
+`;
+
 interface MenuSliderProps {
   setOpenMenu: (flag: boolean) => void;
 }
 
 const NavBar: FC<MenuSliderProps> = (props) => {
   const { setOpenMenu } = props;
+  const [isTop, setIsTop] = useState<boolean>(true);
+  const [fontColor, setFontColor] = useState<string>("white");
+  const [backgroundColor, setBackgroundColor] = useState<string>("#221b47");
+  const scrollDuration = 100;
+
+  window.onscroll = function () {
+    if (window.pageYOffset <= 50) {
+      setIsTop(true);
+      setFontColor("white");
+      setBackgroundColor("#221b47");
+    } else {
+      setIsTop(false);
+      setFontColor("black");
+      setBackgroundColor("white");
+    }
+  };
+
   return (
-    <NavBarWrapper>
+    <NavBarWrapper
+      isTop={isTop}
+      fontColor={fontColor}
+      backgroundColor={backgroundColor}
+    >
       <Row justify="space-between" align="middle" className="nav">
         <Col>
-          <h1>Nitipon.eth</h1>
+          <Link to="intro" spy={true} smooth={true} duration={scrollDuration}>
+            <NavBarIconColor color={fontColor} />
+          </Link>
         </Col>
         <Col>
           <div className="menu">
-            <div className="sub-menu">About</div>
-            <div className="sub-menu">Skills</div>
-            <div className="sub-menu">Works</div>
-            <div className="sub-menu">Contract</div>
+            <div className="sub-menu">
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                duration={scrollDuration}
+              >
+                About
+              </Link>
+            </div>
+            <div className="sub-menu">
+              <Link
+                to="experience"
+                spy={true}
+                smooth={true}
+                duration={scrollDuration}
+              >
+                Experience
+              </Link>
+            </div>
+            <div className="sub-menu">
+              <Link
+                to="works"
+                spy={true}
+                smooth={true}
+                duration={scrollDuration}
+              >
+                Works
+              </Link>
+            </div>
+            <div className="sub-menu">
+              <Link
+                to="contract"
+                spy={true}
+                smooth={true}
+                duration={scrollDuration}
+              >
+                Contract
+              </Link>
+            </div>
           </div>
           <div className="mobile-menu" onClick={() => setOpenMenu(true)}>
-            <GrMenu />
+            <GrMenuColor color={fontColor} />
           </div>
         </Col>
       </Row>

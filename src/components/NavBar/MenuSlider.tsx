@@ -1,11 +1,13 @@
 import React, { FC } from "react";
 import styled from "styled-components";
+import { Link } from "react-scroll";
 
 import { GrClose } from "react-icons/gr";
 
 const MenuSliderWrapper = styled.div`
   .slider {
-    background-color: lightgrey;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(25px);
     position: fixed;
     height: 100%;
     width: 100%;
@@ -40,6 +42,10 @@ const MenuSliderWrapper = styled.div`
     cursor: pointer;
     font-size: 1.7rem;
   }
+
+  a {
+    color: black;
+  }
 `;
 
 interface MenuSliderProps {
@@ -56,8 +62,18 @@ const MenuSlider: FC<MenuSliderProps> = (props) => {
         <div className="close-icon" onClick={() => setOpenMenu(false)}>
           <GrClose />
         </div>
-        <h2>About</h2>
-        <h2>Skills</h2>
+        <h2>
+          <Link
+            to="about"
+            spy={true}
+            smooth={true}
+            duration={100}
+            onClick={() => setOpenMenu(false)}
+          >
+            About
+          </Link>
+        </h2>
+        <h2>Experience</h2>
         <h2>Works</h2>
         <h2>Contract</h2>
       </div>

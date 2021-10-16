@@ -1,11 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import ProfileImage from "utils/images/profile_pic2.png";
+import ProfileImage from "assets/images/profile_pic2.png";
 
-const ImageWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-
+const ImageWrapper = styled.span`
   .bounce-2 {
     animation-name: bounce-2;
     animation-timing-function: ease;
@@ -16,7 +13,7 @@ const ImageWrapper = styled.div`
       transform: translateY(0);
     }
     50% {
-      transform: translateY(-30px);
+      transform: translateY(-5px);
     }
     100% {
       transform: translateY(0);
@@ -26,16 +23,11 @@ const ImageWrapper = styled.div`
   .image {
     height: 80%;
     width: 80%;
-    max-height: 300px;
-    max-width: 300px;
+    max-height: 1.25em;
+    max-width: 1.25em;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     transform-origin: bottom;
-
-    @media (max-width: 1200px) {
-      max-height: 220px;
-      max-width: 220px;
-    }
   }
 `;
 

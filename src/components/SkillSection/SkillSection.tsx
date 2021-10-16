@@ -1,34 +1,31 @@
 import React from "react";
 import styled from "styled-components";
 import { Card } from "antd";
-import AboutDetail from "./components/AboutDetail";
-import Skills from "./components/Skills";
-const AboutContainer = styled.div`
-  z-index: -999;
+
+const SkillContainer = styled.div`
+  background-color: transparent;
   min-height: 400px;
   min-width: 375px;
-  padding: 4rem 1rem;
-  display: flex;
-  justify-content: center;
+  margin-top: 4em;
+  padding-bottom: 4em;
+  padding-right: 1rem;
+  padding-left: 1rem;
+
   letter-spacing: 0.05em;
   word-wrap: break-word;
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 
   .card {
-    margin: 0.5em 0.25rem;
+    margin: 0.5em auto;
     width: 95%;
 
     .ant-card-body {
       font-size: 1.4em;
       position: sticky;
-      margin: 1rem 3rem;
     }
 
     --border-width: 5px;
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: var(--border-width);
     &::after {
       position: absolute;
@@ -58,17 +55,40 @@ const AboutContainer = styled.div`
       }
     }
   }
+
+  @media (min-width: 1150px) {
+    .about {
+      max-width: 85%;
+    }
+
+    .ant-row {
+      width: 85%;
+    }
+  }
+
+  .title {
+    text-align: right;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .about {
+    padding: 0.25em;
+  }
 `;
 
-const AboutSection = () => {
+const SkillSection = () => {
   return (
-    <AboutContainer id="about">
+    <SkillContainer>
       <Card className="card">
-        <AboutDetail />
-        <Skills />
+        <div className="title">
+          <h1>Skills</h1>
+        </div>
       </Card>
-    </AboutContainer>
+    </SkillContainer>
   );
 };
 
-export default AboutSection;
+export default SkillSection;
