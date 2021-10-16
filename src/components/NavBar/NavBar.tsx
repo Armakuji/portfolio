@@ -83,6 +83,27 @@ const NavBarWrapper = styled.div<NavBarProps>`
   }
 `;
 
+interface IconProps {
+  color: string;
+}
+
+const GrMenuColor = styled(GrMenu)<IconProps>`
+  path {
+    stroke: ${(props) => props.color};
+  }
+`;
+
+const NavBarIconColor = styled(NavbarIcon)<IconProps>`
+  height: 1em;
+  width: auto;
+  margin-top: 0.5em;
+
+  path {
+    stroke: ${(props) => props.color};
+    fill: ${(props) => props.color};
+  }
+`;
+
 interface MenuSliderProps {
   setOpenMenu: (flag: boolean) => void;
 }
@@ -93,23 +114,6 @@ const NavBar: FC<MenuSliderProps> = (props) => {
   const [fontColor, setFontColor] = useState<string>("white");
   const [backgroundColor, setBackgroundColor] = useState<string>("#221b47");
   const scrollDuration = 100;
-
-  const GrMenuColor = styled(GrMenu)`
-    path {
-      stroke: ${fontColor};
-    }
-  `;
-
-  const NavBarIconColor = styled(NavbarIcon)`
-    height: 1em;
-    width: auto;
-    margin-top: 0.5em;
-
-    path {
-      stroke: ${fontColor};
-      fill: ${fontColor};
-    }
-  `;
 
   window.onscroll = function () {
     if (window.pageYOffset <= 50) {
@@ -132,7 +136,7 @@ const NavBar: FC<MenuSliderProps> = (props) => {
       <Row justify="space-between" align="middle" className="nav">
         <Col>
           <Link to="intro" spy={true} smooth={true} duration={scrollDuration}>
-            <NavBarIconColor />
+            <NavBarIconColor color={fontColor} />
           </Link>
         </Col>
         <Col>
@@ -149,12 +153,12 @@ const NavBar: FC<MenuSliderProps> = (props) => {
             </div>
             <div className="sub-menu">
               <Link
-                to="skills"
+                to="experience"
                 spy={true}
                 smooth={true}
                 duration={scrollDuration}
               >
-                skills
+                Experience
               </Link>
             </div>
             <div className="sub-menu">
@@ -179,7 +183,7 @@ const NavBar: FC<MenuSliderProps> = (props) => {
             </div>
           </div>
           <div className="mobile-menu" onClick={() => setOpenMenu(true)}>
-            <GrMenuColor />
+            <GrMenuColor color={fontColor} />
           </div>
         </Col>
       </Row>

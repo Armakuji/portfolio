@@ -73,7 +73,7 @@ const MenuSlider: FC<MenuSliderProps> = (props) => {
             About
           </Link>
         </h2>
-        <h2>Skills</h2>
+        <h2>Experience</h2>
         <h2>Works</h2>
         <h2>Contract</h2>
       </div>
