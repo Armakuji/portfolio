@@ -11,6 +11,10 @@ interface SkillDetailProps {
 
 const SkillDetailContainer = styled.div`
   margin-bottom: 0.5em;
+
+  .sub-title {
+    color: ${(props) => props.theme.subTitle};
+  }
 `;
 
 const { Text, Title } = Typography;
@@ -20,7 +24,9 @@ const SkillDetail: FC<SkillDetailProps> = (props) => {
   return (
     <FadeInContainer>
       <SkillDetailContainer>
-        <Title level={4}>{title}</Title>
+        <Title level={4} className="sub-title">
+          {title}
+        </Title>
         <Row justify="start" gutter={[20, 10]}>
           {skillList.map((item: string, index: number) => (
             <Col xs={12} md={9} key={index}>

@@ -13,6 +13,11 @@ const AboutDetailContainer = styled.div`
   }
 
   .title {
+    color: ${(props) => props.theme.title};
+  }
+
+  .sub-title {
+    color: ${(props) => props.theme.subTitle};
   }
 
   .text-center {
@@ -21,10 +26,6 @@ const AboutDetailContainer = styled.div`
 
   .bold {
     font-weight: bold;
-  }
-
-  .blue {
-    color: #bf953f;
   }
 
   .about {
@@ -57,7 +58,7 @@ const Experience = () => {
   return (
     <AboutDetailContainer>
       <div className="text-center title">
-        <h1>About Me</h1>
+        <h1 className="title">About Me</h1>
       </div>
       <FadeInContainer>
         <Row align="middle" justify="center" gutter={[20, 40]}>
@@ -68,8 +69,8 @@ const Experience = () => {
             <div className="about">
               <div>
                 &ldquo; My name is{" "}
-                <label className="bold blue">Nitipon Chingthongchai</label>. I
-                like to think, analyze, and solve problems. So I really like
+                <label className="bold sub-title">Nitipon Chingthongchai</label>
+                . I like to think, analyze, and solve problems. So I really like
                 coding.
               </div>
               <br />

@@ -18,7 +18,9 @@ const Skills = () => {
   return (
     <SkillContainer id="skills">
       <Divider />
-      <Title level={2}>Skills</Title>
+      <Title level={2} className="title">
+        Skills
+      </Title>
       <SkillDetail title="Languages" skillList={languageList} />
       <SkillDetail title="Library and Frameworks" skillList={libraryList} />
       <SkillDetail title="Database" skillList={databaseList} />
