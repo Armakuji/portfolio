@@ -2,6 +2,11 @@ import styled from "styled-components";
 
 export const IntroContrainer = styled.div`
   background-color: #221b47;
+  width: fit-content;
+
+  @media (min-width: 365px) {
+    width: auto;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -21,6 +26,7 @@ export const Content = styled.div`
   line-height: 1.5;
   padding: 0 2em;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  width: 100vw;
 
   .blue {
     color: #7b79f7;
@@ -78,8 +84,6 @@ export const Content = styled.div`
   }
 
   @media (min-width: 800px) {
-    width: 960px;
-
     h1 {
       font-size: 2.6rem;
     }
