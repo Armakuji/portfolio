@@ -3,8 +3,8 @@ export const languageList = [
   "Typescript",
   "HTML",
   "CSS",
-  "Solidity",
   "Java",
+  "Solidity",
 ];
 
 export const libraryList = [
@@ -12,11 +12,11 @@ export const libraryList = [
   "Redux",
   "NodeJS",
   "Express",
-  "Web3",
   "Jest",
   "Boostrap",
   "Antd",
   "styled-component",
+  "Web3",
 ];
 
 export const databaseList = ["MongoDB", "MySQL"];

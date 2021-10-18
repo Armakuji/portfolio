@@ -2,13 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { Card } from "antd";
 import AboutDetail from "./components/AboutDetail";
-import Skills from "./components/Skills";
+import SectionDevider from "components/SectionDevider/SectionDevider";
+import Skills from "./components/Skills/Skills";
 
 const AboutContainer = styled.div`
   z-index: -999;
   min-height: 400px;
   min-width: 375px;
-  padding: 4rem 1rem;
+  padding: 4rem 1rem 1rem 1rem;
+
   display: flex;
   justify-content: center;
   letter-spacing: 0.05em;
@@ -68,6 +70,7 @@ const AboutSection = () => {
     <AboutContainer id="about">
       <Card className="card">
         <AboutDetail />
+        <SectionDevider />
         <Skills />
       </Card>
     </AboutContainer>

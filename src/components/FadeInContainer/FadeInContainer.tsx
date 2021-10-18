@@ -5,21 +5,25 @@ interface FadeInContainerProps {
 }
 
 const FadeInContainer: FC<FadeInContainerProps> = (props) => {
+  const { children } = props;
   const [isVisible, setVisible] = useState(false);
   const domRef = useRef<HTMLDivElement>(null);
-  const { children } = props;
+
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => setVisible(entry.isIntersecting));
     });
 
     const current = domRef.current;
-    if (!current) return;
+    console.log("current", current);
+    if (current) {
+      observer.observe(current);
 
-    observer.observe(current);
-
-    return () => observer.unobserve(current);
-  }, []);
+      return () => {
+        observer.unobserve(current);
+      };
+    }
+  }, []); //eslint-disable-line
 
   return (
     <div

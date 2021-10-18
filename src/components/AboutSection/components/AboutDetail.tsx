@@ -61,7 +61,7 @@ const Experience = () => {
         <h1 className="title">About Me</h1>
       </div>
       <FadeInContainer>
-        <Row align="middle" justify="center" gutter={[20, 40]}>
+        <Row align="middle" justify="center" gutter={[20, 40]} id="intro-fade">
           <Col xs={24} md={12}>
             <ProfileImageContainer />
           </Col>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const IntroContrainer = styled.div`
-  background-color: #221b47;
+  background: #221b47;
   width: fit-content;
 
   @media (min-width: 365px) {
@@ -28,7 +28,7 @@ export const Content = styled.div`
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   width: 100vw;
 
-  .blue {
+  .title {
     color: #7b79f7;
   }
 

@@ -20,7 +20,7 @@ const IntroSection = () => {
               <Col xs={24} md={14}>
                 <div className="description-box">
                   <h1>
-                    Hi there. I'm <span className="blue">Nitipon</span>
+                    Hi there. I'm <span className="title">Nitipon</span>
                   </h1>
                   <h2>Software Engineer 🧑‍💻</h2>
                   <p>I am a software engineer with a focus on the frontend</p>

@@ -1,9 +1,15 @@
 .fade-in-section {
-  opacity: 0;
-  transition: opacity 1200ms ease-out, transform 600ms ease-out,
-    visibility 1200ms ease-out;
-  will-change: opacity, transform, visibility;
+  opacity: 1;
 }
 .fade-in-section.is-visible {
-  opacity: 1;
+  animation: fadeIn 1.2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

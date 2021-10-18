@@ -5,6 +5,7 @@ import NavBar from "components/NavBar/NavBar";
 import MenuSlider from "components/NavBar/MenuSlider";
 import IntroSection from "components/IntroSection/IntroSection";
 import AboutSection from "components/AboutSection/AboutSection";
+import ExperienceSection from "components/ExperienceSection/ExperienceSection";
 
 const LandingPageWrapper = styled.div`
   -webkit-font-smoothing: auto;
@@ -30,6 +31,7 @@ const LandingPage = () => {
       <MenuSlider openMenu={openMenu} setOpenMenu={setOpenMenu} />
       <IntroSection />
       <AboutSection />
+      <ExperienceSection />
     </LandingPageWrapper>
   );
 };
