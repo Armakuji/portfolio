@@ -10,12 +10,11 @@ const ExperienceSectionContainer = styled.div`
   word-wrap: break-word;
   padding: 4rem 0.5rem 0.5rem;
   .title {
-    // color: chartreuse;
-    color: darkorange;
-    // color: hotpink;
-    // color: deepbluesky;
-    //color: dorgerblue;
-    //colot: mediumspringgreen;
+    color: chartreuse;
+    // color: darkorange;
+    // color: deepskyblue;
+    // color: dodgerblue;
+    // color: mediumspringgreen;
     // color: ${(props) => props.theme.title};
   }
 

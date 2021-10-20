@@ -11,11 +11,11 @@ const FadeInContainer: FC<FadeInContainerProps> = (props) => {
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => setVisible(entry.isIntersecting));
+      entries.forEach((entry) => entry.isIntersecting && setVisible(true));
     });
 
     const current = domRef.current;
-    console.log("current", current);
+
     if (current) {
       observer.observe(current);
 
@@ -27,7 +27,7 @@ const FadeInContainer: FC<FadeInContainerProps> = (props) => {
 
   return (
     <div
-      className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
+      className={`fade-in-section ${isVisible ? "is-active" : ""}`}
       ref={domRef}
     >
       {children}

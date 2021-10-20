@@ -55,6 +55,7 @@ interface MenuSliderProps {
 
 const MenuSlider: FC<MenuSliderProps> = (props) => {
   const { openMenu, setOpenMenu } = props;
+  const scrollDuration = 200;
 
   return (
     <MenuSliderWrapper>
@@ -73,9 +74,39 @@ const MenuSlider: FC<MenuSliderProps> = (props) => {
             About
           </Link>
         </h2>
-        <h2>Experience</h2>
-        <h2>Works</h2>
-        <h2>Contract</h2>
+        <h2>
+          <Link
+            to="experience"
+            spy={true}
+            smooth={true}
+            duration={scrollDuration}
+            onClick={() => setOpenMenu(false)}
+          >
+            Experience
+          </Link>
+        </h2>
+        <h2>
+          <Link
+            to="works"
+            spy={true}
+            smooth={true}
+            duration={scrollDuration}
+            onClick={() => setOpenMenu(false)}
+          >
+            Works
+          </Link>
+        </h2>
+        <h2>
+          <Link
+            to="contract"
+            spy={true}
+            smooth={true}
+            duration={scrollDuration}
+            onClick={() => setOpenMenu(false)}
+          >
+            Contract
+          </Link>
+        </h2>
       </div>
     </MenuSliderWrapper>
   );
