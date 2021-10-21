@@ -14,11 +14,6 @@ const ExperienceSectionContainer = styled.div`
   padding: 4rem 0.5rem 0.5rem;
   .title {
     color: #50fa7b;
-    // color: darkorange;
-    // color: deepskyblue;
-    // color: dodgerblue;
-    // color: mediumspringgreen;
-    // color: ${(props) => props.theme.title};
   }
 
   .card {

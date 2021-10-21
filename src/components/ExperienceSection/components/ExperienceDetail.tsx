@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import FadeInContainer from "components/FadeInContainer/FadeInContainer";
 import { Typography, Space } from "antd";
-import { AiFillCaretRight } from "react-icons/ai";
 import { experienceList } from "utils/ExperienceList";
+import { ReactComponent as RightArrow } from "assets/svg/right_arrow.svg";
 
 interface ExperienceDetailType {
   title: string;
@@ -17,9 +17,11 @@ const ExperienceDetailContainer = styled.div`
   .detail {
     padding-bottom: 2em;
 
-    h4.ant-typography {
+    .title {
       color: white;
       line-height: 1.25;
+      font-weight: 600;
+      font-size: 20px;
     }
 
     .description {
@@ -29,14 +31,10 @@ const ExperienceDetailContainer = styled.div`
         color: #a4a7c1;
       }
     }
-    // color: darkorange;
-    // color: deepskyblue;
-    // color: dodgerblue;
-    // color: mediumspringgreen;
   }
 `;
 
-const AiFillCaretRightColor = styled(AiFillCaretRight)`
+const RightArrowColor = styled(RightArrow)`
   height: 1em;
   width: auto;
 
@@ -46,7 +44,7 @@ const AiFillCaretRightColor = styled(AiFillCaretRight)`
   }
 `;
 
-const { Text, Title } = Typography;
+const { Text } = Typography;
 
 const ExperienceDetail = () => {
   return (
@@ -55,12 +53,12 @@ const ExperienceDetail = () => {
         return (
           <div className="detail" key={index}>
             <FadeInContainer>
-              <Title level={4}>
+              <Text className="title">
                 <Space>
-                  <AiFillCaretRightColor />
+                  <RightArrowColor />
                   {item.title}
                 </Space>
-              </Title>
+              </Text>
               <div className="description">
                 <Text>{item.description}</Text>
               </div>

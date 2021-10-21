@@ -24,6 +24,7 @@ const AboutContainer = styled.div`
   .card {
     margin: 0.5em 0.25rem;
     width: 95%;
+    border-radius: 15px;
 
     .ant-card-body {
       font-size: 1.4em;

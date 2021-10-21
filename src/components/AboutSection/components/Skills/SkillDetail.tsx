@@ -2,15 +2,19 @@ import React, { FC } from "react";
 import styled from "styled-components";
 import { Typography, Row, Col, Divider, Space } from "antd";
 import FadeInContainer from "components/FadeInContainer/FadeInContainer";
-import { AiFillCaretRight } from "react-icons/ai";
+import { ReactComponent as RightArrow } from "assets/svg/right_arrow.svg";
+
 interface SkillDetailProps {
   title: string;
   skillList: string[];
 }
 
 const SkillDetailContainer = styled.div`
-  h4.ant-typography {
-    color: ${(props) => props.theme.subTitle};
+  .title {
+    color: #3d56b2;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.4;
   }
 
   .ant-divider-horizontal {
@@ -22,7 +26,7 @@ const SkillDetailContainer = styled.div`
   }
 `;
 
-const AiFillCaretRightColor = styled(AiFillCaretRight)`
+const RightArrowColor = styled(RightArrow)`
   height: 1em;
   width: auto;
   margin-top: 0.5em;
@@ -33,7 +37,7 @@ const AiFillCaretRightColor = styled(AiFillCaretRight)`
   }
 `;
 
-const { Text, Title } = Typography;
+const { Text } = Typography;
 
 const SkillDetail: FC<SkillDetailProps> = (props) => {
   const { title, skillList } = props;
@@ -42,12 +46,12 @@ const SkillDetail: FC<SkillDetailProps> = (props) => {
       <SkillDetailContainer>
         <Row gutter={[15, 0]}>
           <Col xs={24} md={8}>
-            <Title level={4}>
+            <Text className="title">
               <Space>
-                <AiFillCaretRightColor />
+                <RightArrowColor />
                 {title}
               </Space>
-            </Title>
+            </Text>
           </Col>
           <Col xs={24} md={10}>
             <div className="skill-list">

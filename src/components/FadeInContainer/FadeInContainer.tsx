@@ -23,7 +23,7 @@ const FadeInContainer: FC<FadeInContainerProps> = (props) => {
         observer.unobserve(current);
       };
     }
-  }, []); //eslint-disable-line
+  }, []);
 
   return (
     <div

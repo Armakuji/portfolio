@@ -1,8 +1,7 @@
 import React, { FC } from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
-
-import { GrClose } from "react-icons/gr";
+import { ReactComponent as Close } from "assets/svg/close.svg";
 
 const MenuSliderWrapper = styled.div`
   .slider {
@@ -61,7 +60,7 @@ const MenuSlider: FC<MenuSliderProps> = (props) => {
     <MenuSliderWrapper>
       <div className={openMenu ? "slider" : "slider close"}>
         <div className="close-icon" onClick={() => setOpenMenu(false)}>
-          <GrClose />
+          <Close />
         </div>
         <h2>
           <Link

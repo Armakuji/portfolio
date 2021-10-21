@@ -33,32 +33,28 @@ export const Content = styled.div`
     color: #7b79f7;
   }
 
-  h1 {
+  h1.ant-typography {
     color: white;
     opacity: 0.98;
     font-weight: bold;
     margin-bottom: 0;
   }
 
-  h2 {
+  h2.ant-typography {
     font-weight: bold;
     color: white;
     margin-bottom: 0;
+    margin-top: 0.25em;
   }
 
-  p {
+  span.ant-typography {
     word-wrap: break-word;
-    margin-top: 0.5em;
-
+    padding-top: 0.5em;
     color: white;
   }
 
   .ant-row {
     min-width: 70vw;
-  }
-
-  .description-box {
-    display: inline-block;
   }
 
   @media (max-width: 767px) {
@@ -70,30 +66,30 @@ export const Content = styled.div`
   }
 
   @media (min-width: 375px) {
-    h1 {
+    h1.ant-typography {
       font-size: 2.4rem;
     }
 
-    h2 {
+    h2.ant-typography {
       font-size: 2rem;
     }
 
-    p {
+    span.ant-typography {
       word-wrap: break-word;
       font-size: 1.4rem;
     }
   }
 
   @media (min-width: 820px) {
-    h1 {
+    h1.ant-typography {
       font-size: 2.6rem;
     }
 
-    h2 {
+    h2.ant-typography {
       font-size: 2.2em;
     }
 
-    p {
+    span.ant-typography {
       max-width: 460px;
       font-size: 1.8em;
     }
@@ -110,4 +106,8 @@ export const Content = styled.div`
 export const IconWrapper = styled.div`
   display: flex;
   justify-content: center;
+
+  @media (max-width: 767px) {
+    margin-top: 3rem;
+  }
 `;

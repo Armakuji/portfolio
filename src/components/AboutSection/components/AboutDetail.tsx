@@ -2,7 +2,7 @@ import React from "react";
 import FadeInContainer from "components/FadeInContainer/FadeInContainer";
 import styled from "styled-components";
 import { Row, Col } from "antd";
-import ProfileImage from "assets/images/profile_image.png";
+import ProfileImage from "assets/images/profile_image.jpg";
 
 const AboutDetailContainer = styled.div`
   @media (min-width: 1100px) {
@@ -17,7 +17,7 @@ const AboutDetailContainer = styled.div`
   }
 
   .sub-title {
-    color: ${(props) => props.theme.subTitle};
+    color: #3d56b2;
   }
 
   .text-center {
