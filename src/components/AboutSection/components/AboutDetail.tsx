@@ -5,6 +5,9 @@ import { Row, Col } from "antd";
 import ProfileImage from "assets/images/profile_image.jpg";
 
 const AboutDetailContainer = styled.div`
+  display: grid;
+  justify-content: center;
+
   @media (min-width: 1100px) {
     .ant-row {
       padding: 1em 2em;

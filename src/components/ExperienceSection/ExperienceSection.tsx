@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Typography, Card } from "antd";
 import ExperienceDetail from "./components/ExperienceDetail";
+import { experienceList, awardList } from "utils/ExperienceList";
 
 const ExperienceSectionContainer = styled.div`
   background: #221b47;
@@ -49,7 +50,11 @@ const ExperienceSection = () => {
         <Title level={2} className="title">
           Experience
         </Title>
-        <ExperienceDetail />
+        <ExperienceDetail experienceList={experienceList} />
+        <Title level={2} className="title">
+          {`Honors & Awards`}
+        </Title>
+        <ExperienceDetail experienceList={awardList} />
       </Card>
     </ExperienceSectionContainer>
   );

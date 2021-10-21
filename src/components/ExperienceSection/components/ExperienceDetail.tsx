@@ -1,14 +1,9 @@
-import React from "react";
+import React, { FC } from "react";
 import styled from "styled-components";
 import FadeInContainer from "components/FadeInContainer/FadeInContainer";
 import { Typography, Space } from "antd";
-import { experienceList } from "utils/ExperienceList";
+import { ExperienceDetailType } from "utils/ExperienceList";
 import { ReactComponent as RightArrow } from "assets/svg/right_arrow.svg";
-
-interface ExperienceDetailType {
-  title: string;
-  description: string;
-}
 
 const ExperienceDetailContainer = styled.div`
   margin: 2rem 1rem;
@@ -22,6 +17,10 @@ const ExperienceDetailContainer = styled.div`
       line-height: 1.25;
       font-weight: 600;
       font-size: 20px;
+    }
+
+    .ant-space {
+      padding-bottom: 0.25em;
     }
 
     .description {
@@ -46,7 +45,12 @@ const RightArrowColor = styled(RightArrow)`
 
 const { Text } = Typography;
 
-const ExperienceDetail = () => {
+interface ExperienceDetailProps {
+  experienceList: ExperienceDetailType[];
+}
+
+const ExperienceDetail: FC<ExperienceDetailProps> = (props) => {
+  const { experienceList } = props;
   return (
     <ExperienceDetailContainer>
       {experienceList.map((item: ExperienceDetailType, index: number) => {

@@ -1,3 +1,8 @@
+export interface ExperienceDetailType {
+  title: string;
+  description: string;
+}
+
 export const experienceList = [
   {
     title: "Make a contribution to Uniswap-interface",
@@ -23,5 +28,21 @@ export const experienceList = [
   {
     title: "Used car shop management online System",
     description: "NodeJS MVC, Express, MongoDB",
+  },
+];
+
+export const awardList = [
+  {
+    title: "Hacktoberfest 2021",
+    description:
+      "Contribute to an open source project with 5 Project and 5 pull requests.",
+  },
+  {
+    title: "SCB HACKATHON 2020",
+    description: "3nd Runner up - Future ATM Project",
+  },
+  {
+    title: "HACKADAY",
+    description: "Completion of hackathon by Sirisoft company",
   },
 ];
