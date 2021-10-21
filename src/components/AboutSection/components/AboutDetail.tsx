@@ -60,12 +60,15 @@ const Experience = () => {
       <div className="text-center title">
         <h1 className="title">About Me</h1>
       </div>
-      <FadeInContainer>
-        <Row align="middle" justify="center" gutter={[20, 40]} id="intro-fade">
-          <Col xs={24} md={12}>
+
+      <Row align="middle" justify="center" gutter={[20, 40]} id="intro-fade">
+        <Col xs={24} md={12}>
+          <FadeInContainer>
             <ProfileImageContainer />
-          </Col>
-          <Col xs={24} md={12}>
+          </FadeInContainer>
+        </Col>
+        <Col xs={24} md={12}>
+          <FadeInContainer>
             <div className="about">
               <div>
                 &ldquo; My name is{" "}
@@ -82,9 +85,9 @@ const Experience = () => {
                 </div>
               </div>
             </div>
-          </Col>
-        </Row>
-      </FadeInContainer>
+          </FadeInContainer>
+        </Col>
+      </Row>
     </AboutDetailContainer>
   );
 };

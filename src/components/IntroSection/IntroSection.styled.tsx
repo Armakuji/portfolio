@@ -6,6 +6,7 @@ export const IntroContrainer = styled.div`
 
   @media (min-width: 365px) {
     width: auto;
+    padding-top: 2em;
   }
 `;
 
@@ -83,7 +84,7 @@ export const Content = styled.div`
     }
   }
 
-  @media (min-width: 800px) {
+  @media (min-width: 820px) {
     h1 {
       font-size: 2.6rem;
     }

@@ -124,6 +124,7 @@ const NavBar: FC<MenuSliderProps> = (props) => {
       setIsTop(false);
       setFontColor("black");
       setBackgroundColor("white");
+      console.log("exe");
     }
   };
 

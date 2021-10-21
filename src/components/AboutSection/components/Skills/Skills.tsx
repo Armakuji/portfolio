@@ -8,7 +8,7 @@ import {
   libraryList,
   databaseList,
   toolList,
-} from "utils/SkillList/SkillList";
+} from "utils/SkillList";
 
 const SkillContainer = styled.div``;
 

@@ -6,7 +6,8 @@ import SectionDevider from "components/SectionDevider/SectionDevider";
 import Skills from "./components/Skills/Skills";
 
 const AboutContainer = styled.div`
-  z-index: -999;
+  background: #221b47;
+
   min-height: 400px;
   min-width: 375px;
   padding: 4rem 1rem 1rem 1rem;
@@ -33,33 +34,6 @@ const AboutContainer = styled.div`
     @media (min-width: 440px) {
       .ant-card-body {
         margin: 1rem 3rem;
-      }
-    }
-
-    --border-width: 5px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: var(--border-width);
-    &::after {
-      position: absolute;
-      content: "";
-      top: calc(-1 * var(--border-width));
-      left: calc(-1 * var(--border-width));
-      z-index: -1;
-      width: calc(100% + var(--border-width) * 2);
-      height: calc(100% + var(--border-width) * 2);
-      background: linear-gradient(60deg, #454894, #7b79f7, #221b47, #7b79f7);
-      background-size: 300% 300%;
-      background-position: 0 50%;
-      border-radius: calc(2 * var(--border-width));
-      animation: moveGradient 4s alternate infinite;
-    }
-
-    @keyframes moveGradient {
-      50% {
-        background-position: 100% 50%;
       }
     }
   }

@@ -1,8 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { Typography, Card } from "antd";
+import ExperienceDetail from "./components/ExperienceDetail";
 
 const ExperienceSectionContainer = styled.div`
+  background: #221b47;
+
   min-height: 400px;
   display: flex;
   justify-content: center;
@@ -10,7 +13,7 @@ const ExperienceSectionContainer = styled.div`
   word-wrap: break-word;
   padding: 4rem 0.5rem 0.5rem;
   .title {
-    color: chartreuse;
+    color: #50fa7b;
     // color: darkorange;
     // color: deepskyblue;
     // color: dodgerblue;
@@ -23,8 +26,8 @@ const ExperienceSectionContainer = styled.div`
     height: 100%;
     min-height: 800px;
     border-radius: 15px;
-    background: #221b47;
-    box-shadow: 1px 1px 15px #221b47;
+    background: #282a36;
+    box-shadow: 1px 1px 15px #282a36;
 
     border: none;
 
@@ -51,6 +54,7 @@ const ExperienceSection = () => {
         <Title level={2} className="title">
           Experience
         </Title>
+        <ExperienceDetail />
       </Card>
     </ExperienceSectionContainer>
   );
