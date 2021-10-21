@@ -3,30 +3,22 @@ export const languageList = [
   "Typescript",
   "HTML",
   "CSS",
-  "Solidity",
   "Java",
+  "Solidity",
 ];
 
 export const libraryList = [
   "React",
   "Redux",
-  "Web3",
   "NodeJS",
   "Express",
   "Jest",
   "Boostrap",
   "Antd",
   "styled-component",
+  "Web3",
 ];
 
 export const databaseList = ["MongoDB", "MySQL"];
 
-export const toolList = [
-  "Gitlab",
-  "Github",
-  "Sourcetree",
-  "VSCode",
-  "Firebase",
-  "IntelliJ",
-  "Xampp",
-];
+export const toolList = ["Git", "VSCode", "Firebase", "IntelliJ", "Xampp"];

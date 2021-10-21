@@ -1,8 +1,7 @@
 import React, { FC } from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
-
-import { GrClose } from "react-icons/gr";
+import { ReactComponent as Close } from "assets/svg/close.svg";
 
 const MenuSliderWrapper = styled.div`
   .slider {
@@ -55,12 +54,13 @@ interface MenuSliderProps {
 
 const MenuSlider: FC<MenuSliderProps> = (props) => {
   const { openMenu, setOpenMenu } = props;
+  const scrollDuration = 200;
 
   return (
     <MenuSliderWrapper>
       <div className={openMenu ? "slider" : "slider close"}>
         <div className="close-icon" onClick={() => setOpenMenu(false)}>
-          <GrClose />
+          <Close />
         </div>
         <h2>
           <Link
@@ -73,9 +73,39 @@ const MenuSlider: FC<MenuSliderProps> = (props) => {
             About
           </Link>
         </h2>
-        <h2>Experience</h2>
-        <h2>Works</h2>
-        <h2>Contract</h2>
+        <h2>
+          <Link
+            to="experience"
+            spy={true}
+            smooth={true}
+            duration={scrollDuration}
+            onClick={() => setOpenMenu(false)}
+          >
+            Experience
+          </Link>
+        </h2>
+        <h2>
+          <Link
+            to="works"
+            spy={true}
+            smooth={true}
+            duration={scrollDuration}
+            onClick={() => setOpenMenu(false)}
+          >
+            Works
+          </Link>
+        </h2>
+        <h2>
+          <Link
+            to="contract"
+            spy={true}
+            smooth={true}
+            duration={scrollDuration}
+            onClick={() => setOpenMenu(false)}
+          >
+            Contract
+          </Link>
+        </h2>
       </div>
     </MenuSliderWrapper>
   );

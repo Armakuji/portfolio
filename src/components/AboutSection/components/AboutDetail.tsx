@@ -2,7 +2,7 @@ import React from "react";
 import FadeInContainer from "components/FadeInContainer/FadeInContainer";
 import styled from "styled-components";
 import { Row, Col } from "antd";
-import ProfileImage from "assets/images/profile_image.png";
+import ProfileImage from "assets/images/profile_image.jpg";
 
 const AboutDetailContainer = styled.div`
   @media (min-width: 1100px) {
@@ -13,6 +13,11 @@ const AboutDetailContainer = styled.div`
   }
 
   .title {
+    color: ${(props) => props.theme.title};
+  }
+
+  .sub-title {
+    color: #3d56b2;
   }
 
   .text-center {
@@ -21,10 +26,6 @@ const AboutDetailContainer = styled.div`
 
   .bold {
     font-weight: bold;
-  }
-
-  .blue {
-    color: #bf953f;
   }
 
   .about {
@@ -57,19 +58,22 @@ const Experience = () => {
   return (
     <AboutDetailContainer>
       <div className="text-center title">
-        <h1>About Me</h1>
+        <h1 className="title">About Me</h1>
       </div>
-      <FadeInContainer>
-        <Row align="middle" justify="center" gutter={[20, 40]}>
-          <Col xs={24} md={12}>
+
+      <Row align="middle" justify="center" gutter={[20, 40]} id="intro-fade">
+        <Col xs={24} md={12}>
+          <FadeInContainer>
             <ProfileImageContainer />
-          </Col>
-          <Col xs={24} md={12}>
+          </FadeInContainer>
+        </Col>
+        <Col xs={24} md={12}>
+          <FadeInContainer>
             <div className="about">
               <div>
                 &ldquo; My name is{" "}
-                <label className="bold blue">Nitipon Chingthongchai</label>. I
-                like to think, analyze, and solve problems. So I really like
+                <label className="bold sub-title">Nitipon Chingthongchai</label>
+                . I like to think, analyze, and solve problems. So I really like
                 coding.
               </div>
               <br />
@@ -81,9 +85,9 @@ const Experience = () => {
                 </div>
               </div>
             </div>
-          </Col>
-        </Row>
-      </FadeInContainer>
+          </FadeInContainer>
+        </Col>
+      </Row>
     </AboutDetailContainer>
   );
 };

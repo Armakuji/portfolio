@@ -1,9 +1,9 @@
 import React, { FC, useState } from "react";
 import { Row, Col } from "antd";
 import styled from "styled-components";
-import { GrMenu } from "react-icons/gr";
 import { Link } from "react-scroll";
 import { ReactComponent as NavbarIcon } from "assets/svg/navbar_icon.svg";
+import { ReactComponent as Hamburgur } from "assets/svg/hamburgur.svg";
 
 interface NavBarProps {
   isTop: boolean;
@@ -87,7 +87,7 @@ interface IconProps {
   color: string;
 }
 
-const GrMenuColor = styled(GrMenu)<IconProps>`
+const HamburgurColor = styled(Hamburgur)<IconProps>`
   path {
     stroke: ${(props) => props.color};
   }
@@ -113,17 +113,19 @@ const NavBar: FC<MenuSliderProps> = (props) => {
   const [isTop, setIsTop] = useState<boolean>(true);
   const [fontColor, setFontColor] = useState<string>("white");
   const [backgroundColor, setBackgroundColor] = useState<string>("#221b47");
-  const scrollDuration = 100;
+  const scrollDuration = 120;
 
   window.onscroll = function () {
     if (window.pageYOffset <= 50) {
       setIsTop(true);
       setFontColor("white");
-      setBackgroundColor("#221b47");
+      setBackgroundColor("transparent");
     } else {
-      setIsTop(false);
-      setFontColor("black");
-      setBackgroundColor("white");
+      if (isTop) {
+        setIsTop(false);
+        setFontColor("black");
+        setBackgroundColor("white");
+      }
     }
   };
 
@@ -183,7 +185,7 @@ const NavBar: FC<MenuSliderProps> = (props) => {
             </div>
           </div>
           <div className="mobile-menu" onClick={() => setOpenMenu(true)}>
-            <GrMenuColor color={fontColor} />
+            <HamburgurColor color={fontColor} />
           </div>
         </Col>
       </Row>
