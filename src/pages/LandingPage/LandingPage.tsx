@@ -6,6 +6,7 @@ import MenuSlider from "components/NavBar/MenuSlider";
 import IntroSection from "components/IntroSection/IntroSection";
 import AboutSection from "components/AboutSection/AboutSection";
 import ExperienceSection from "components/ExperienceSection/ExperienceSection";
+import ContractSection from "components/ContractSection/ContractSection";
 
 const LandingPageWrapper = styled.div`
   -webkit-font-smoothing: auto;
@@ -32,6 +33,7 @@ const LandingPage = () => {
       <IntroSection />
       <AboutSection />
       <ExperienceSection />
+      <ContractSection />
     </LandingPageWrapper>
   );
 };

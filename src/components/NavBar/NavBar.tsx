@@ -50,7 +50,7 @@ const NavBarWrapper = styled.div<NavBarProps>`
   .menu {
     display: flex;
     justify-content: space-around;
-    min-width: 400px;
+    min-width: 350px;
     font-weight: bold;
 
     div {
@@ -161,16 +161,6 @@ const NavBar: FC<MenuSliderProps> = (props) => {
                 duration={scrollDuration}
               >
                 Experience
-              </Link>
-            </div>
-            <div className="sub-menu">
-              <Link
-                to="works"
-                spy={true}
-                smooth={true}
-                duration={scrollDuration}
-              >
-                Works
               </Link>
             </div>
             <div className="sub-menu">

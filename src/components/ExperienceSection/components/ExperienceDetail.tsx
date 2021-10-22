@@ -10,7 +10,7 @@ const ExperienceDetailContainer = styled.div`
   word-break: break-word;
 
   .detail {
-    padding-bottom: 2em;
+    padding-bottom: 1.5em;
 
     .title {
       color: white;

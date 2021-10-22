@@ -20,7 +20,6 @@ const ExperienceSectionContainer = styled.div`
   .card {
     width: 95%;
     height: 100%;
-    min-height: 800px;
     border-radius: 15px;
     background: #282a36;
     box-shadow: 1px 1px 15px #282a36;

@@ -86,17 +86,6 @@ const MenuSlider: FC<MenuSliderProps> = (props) => {
         </h2>
         <h2>
           <Link
-            to="works"
-            spy={true}
-            smooth={true}
-            duration={scrollDuration}
-            onClick={() => setOpenMenu(false)}
-          >
-            Works
-          </Link>
-        </h2>
-        <h2>
-          <Link
             to="contract"
             spy={true}
             smooth={true}
