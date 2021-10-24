@@ -10,6 +10,7 @@ import ContractSection from "components/ContractSection/ContractSection";
 
 const LandingPageWrapper = styled.div`
   -webkit-font-smoothing: auto;
+  font-family: sans-serif;
 `;
 
 const LandingPage = () => {

@@ -58,14 +58,8 @@ const ContractDetail = styled.div`
   display: flex;
   justify-content: center;
 
-  .mail-link {
+  a {
     color: #282a36;
-
-    &:hover {
-      -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-        both;
-      animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    }
   }
 
   @keyframes slide-top {
@@ -86,11 +80,6 @@ const ContractDetail = styled.div`
     path {
       stroke: #50fa7b;
       fill: #50fa7b;
-    }
-
-    @media (max-width: 440px) {
-      width: 2.5em;
-      height: 2.5em;
     }
 
     &:hover {
@@ -123,14 +112,14 @@ const ContractSection = () => {
           <ContractDetail>
             <Row gutter={[40, 40]} justify="center">
               <Col>
-                <a className="mail-link" href="mailto: armakuji@hotmail.com">
+                <a href="mailto: armakuji@hotmail.com" aria-label="email">
                   <MailIcon />
                 </a>
               </Col>
               <Col>
                 <a
-                  className="mail-link"
                   href="https://github.com/Armakuji"
+                  aria-label="github"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -139,8 +128,8 @@ const ContractSection = () => {
               </Col>
               <Col>
                 <a
-                  className="mail-link"
                   href="https://www.linkedin.com/in/nitipon-chingthongchai-162a2b214"
+                  aria-label="linkedin"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -149,8 +138,8 @@ const ContractSection = () => {
               </Col>
               <Col>
                 <a
-                  className="mail-link"
                   href="https://twitter.com/armakuji"
+                  aria-label="twitter"
                   target="_blank"
                   rel="noreferrer"
                 >
