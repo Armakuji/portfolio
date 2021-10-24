@@ -20,7 +20,7 @@ const AboutDetailContainer = styled.div`
   }
 
   .sub-title {
-    color: #3d56b2;
+    color: #454894;
   }
 
   .text-center {
