@@ -32,8 +32,8 @@ const RightArrowColor = styled(RightArrow)`
   margin-top: 0.5em;
 
   path {
-    stroke: ${(props) => props.theme.title};
-    fill: ${(props) => props.theme.title};
+    stroke: #454894;
+    fill: #454894;
   }
 `;
 

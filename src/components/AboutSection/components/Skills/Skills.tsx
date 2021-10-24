@@ -25,7 +25,7 @@ const Skills = () => {
         Skills
       </Title>
       <SkillDetailContainer>
-        <SkillDetail title="Languages" skillList={languageList} />
+        <SkillDetail title="Programming Languages" skillList={languageList} />
         <SkillDetail title="Library and Frameworks" skillList={libraryList} />
         <SkillDetail title="Database" skillList={databaseList} />
         <SkillDetail title="Tools" skillList={toolList} />

@@ -50,7 +50,7 @@ const NavBarWrapper = styled.div<NavBarProps>`
   .menu {
     display: flex;
     justify-content: space-around;
-    min-width: 400px;
+    min-width: 350px;
     font-weight: bold;
 
     div {
@@ -143,46 +143,27 @@ const NavBar: FC<MenuSliderProps> = (props) => {
         </Col>
         <Col>
           <div className="menu">
-            <div className="sub-menu">
-              <Link
-                to="about"
-                spy={true}
-                smooth={true}
-                duration={scrollDuration}
-              >
-                About
-              </Link>
-            </div>
-            <div className="sub-menu">
-              <Link
-                to="experience"
-                spy={true}
-                smooth={true}
-                duration={scrollDuration}
-              >
-                Experience
-              </Link>
-            </div>
-            <div className="sub-menu">
-              <Link
-                to="works"
-                spy={true}
-                smooth={true}
-                duration={scrollDuration}
-              >
-                Works
-              </Link>
-            </div>
-            <div className="sub-menu">
-              <Link
-                to="contract"
-                spy={true}
-                smooth={true}
-                duration={scrollDuration}
-              >
-                Contract
-              </Link>
-            </div>
+            <Link to="about" spy={true} smooth={true} duration={scrollDuration}>
+              <div className="sub-menu">About</div>
+            </Link>
+
+            <Link
+              to="experience"
+              spy={true}
+              smooth={true}
+              duration={scrollDuration}
+            >
+              <div className="sub-menu">Experience</div>
+            </Link>
+
+            <Link
+              to="contract"
+              spy={true}
+              smooth={true}
+              duration={scrollDuration}
+            >
+              <div className="sub-menu">Contract</div>
+            </Link>
           </div>
           <div className="mobile-menu" onClick={() => setOpenMenu(true)}>
             <HamburgurColor color={fontColor} />

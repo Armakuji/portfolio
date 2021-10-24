@@ -5,6 +5,9 @@ import { Row, Col } from "antd";
 import ProfileImage from "assets/images/profile_image.jpg";
 
 const AboutDetailContainer = styled.div`
+  display: grid;
+  justify-content: center;
+
   @media (min-width: 1100px) {
     .ant-row {
       padding: 1em 2em;
@@ -13,11 +16,11 @@ const AboutDetailContainer = styled.div`
   }
 
   .title {
-    color: ${(props) => props.theme.title};
+    color: #454894;
   }
 
   .sub-title {
-    color: #3d56b2;
+    color: #454894;
   }
 
   .text-center {

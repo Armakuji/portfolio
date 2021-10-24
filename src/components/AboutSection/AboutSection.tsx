@@ -18,7 +18,7 @@ const AboutContainer = styled.div`
   word-wrap: break-word;
 
   .title {
-    color: ${(props) => props.theme.title};
+    color: #454894;
   }
 
   .card {
