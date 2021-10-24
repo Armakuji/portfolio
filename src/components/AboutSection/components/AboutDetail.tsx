@@ -16,7 +16,7 @@ const AboutDetailContainer = styled.div`
   }
 
   .title {
-    color: ${(props) => props.theme.title};
+    color: #454894;
   }
 
   .sub-title {

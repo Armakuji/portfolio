@@ -60,20 +60,52 @@ const ContractDetail = styled.div`
 
   .mail-link {
     color: #282a36;
+
+    &:hover {
+      -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        both;
+      animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+  }
+
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-100px);
+      transform: translateY(-100px);
+    }
   }
 
   svg {
-    width: 2.5em;
-    height: 2.5em;
+    width: 3em;
+    height: 3em;
 
     path {
       stroke: #50fa7b;
       fill: #50fa7b;
     }
 
+    @media (max-width: 440px) {
+      width: 2.5em;
+      height: 2.5em;
+    }
+
     &:hover {
-      height: 3em;
-      width: 3em;
+      animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+      @keyframes slide-top {
+        0% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+        100% {
+          -webkit-transform: translateY(-1em);
+          transform: translateY(-1em);
+        }
+      }
     }
   }
 `;
