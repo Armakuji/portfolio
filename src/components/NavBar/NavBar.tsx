@@ -94,7 +94,7 @@ const HamburgurColor = styled(Hamburgur)<IconProps>`
 `;
 
 const NavBarIconColor = styled(NavbarIcon)<IconProps>`
-  height: 1em;
+  height: 1.2em;
   width: auto;
   margin-top: 0.5em;
 

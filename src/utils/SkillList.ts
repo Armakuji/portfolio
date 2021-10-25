@@ -4,6 +4,7 @@ export const languageList = [
   "HTML",
   "CSS",
   "Java",
+  "PHP",
   "Solidity",
 ];
 
@@ -16,6 +17,7 @@ export const libraryList = [
   "Boostrap",
   "Antd",
   "styled-component",
+  "Laravel",
   "Web3",
 ];
 
