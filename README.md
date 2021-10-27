@@ -3,7 +3,7 @@
 
 ## Getting Started
 
-This portfolio is used to learn to build and host decentralised website by using [Fleek](https://fleek.co/) to host and using [Ethereum Name Service](https://ens.domains/) to provide decentralised naming.
+This portfolio is used to learn to build and host decentralised React App on IPFS by using [Fleek](https://fleek.co/) to host and using [Ethereum Name Service](https://ens.domains/) to provide decentralised naming.
 
 
 
