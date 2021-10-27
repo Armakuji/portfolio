@@ -11,6 +11,27 @@ import ContractSection from "components/ContractSection/ContractSection";
 const LandingPageWrapper = styled.div`
   -webkit-font-smoothing: auto;
   font-family: sans-serif;
+
+  .fade-in-section {
+    opacity: 1;
+  }
+
+  .fade-in-section.is-active {
+    animation: fade-in-bottom 1.5s;
+  }
+
+  @keyframes fade-in-bottom {
+    0% {
+      -webkit-transform: translateY(40px);
+      transform: translateY(40px);
+      opacity: 0.5;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 `;
 
 const LandingPage = () => {
