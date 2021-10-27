@@ -1,5 +1,4 @@
 import React from "react";
-import "antd/dist/antd.css";
 import { ThemeProvider } from "styled-components";
 import { theme } from "utils/theme";
 import LandingPage from "pages/LandingPage/LandingPage";
