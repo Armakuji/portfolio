@@ -105,9 +105,11 @@ const ContractSection = () => {
   return (
     <ContractSectionContainer id="contract">
       <Card className="card">
-        <div className="title">
-          <Title level={2}>Get in touch!</Title>
-        </div>
+        <FadeInContainer>
+          <div className="title">
+            <Title level={2}>Get in touch!</Title>
+          </div>
+        </FadeInContainer>
         <FadeInContainer>
           <ContractDetail>
             <Row gutter={[40, 40]} justify="center">

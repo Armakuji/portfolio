@@ -9,6 +9,7 @@ import {
   databaseList,
   toolList,
 } from "utils/SkillList";
+import FadeInContainer from "components/FadeInContainer/FadeInContainer";
 
 const SkillContainer = styled.div``;
 
@@ -21,9 +22,11 @@ const { Title } = Typography;
 const Skills = () => {
   return (
     <SkillContainer id="skills">
-      <Title level={2} className="title">
-        Skills
-      </Title>
+      <FadeInContainer>
+        <Title level={2} className="title">
+          Skills
+        </Title>
+      </FadeInContainer>
       <SkillDetailContainer>
         <SkillDetail title="Programming Languages" skillList={languageList} />
         <SkillDetail title="Library and Frameworks" skillList={libraryList} />

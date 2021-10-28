@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Typography, Card } from "antd";
 import ExperienceDetail from "./components/ExperienceDetail";
 import { experienceList, awardList } from "utils/ExperienceList";
+import FadeInContainer from "components/FadeInContainer/FadeInContainer";
 
 const ExperienceSectionContainer = styled.div`
   background: #221b47;
@@ -46,13 +47,17 @@ const ExperienceSection = () => {
   return (
     <ExperienceSectionContainer id="experience">
       <Card className="card">
-        <Title level={2} className="title">
-          Experience
-        </Title>
+        <FadeInContainer>
+          <Title level={2} className="title">
+            Experience
+          </Title>
+        </FadeInContainer>
         <ExperienceDetail experienceList={experienceList} />
-        <Title level={2} className="title">
-          {`Honors & Awards`}
-        </Title>
+        <FadeInContainer>
+          <Title level={2} className="title">
+            {`Honors & Awards`}
+          </Title>
+        </FadeInContainer>
         <ExperienceDetail experienceList={awardList} />
       </Card>
     </ExperienceSectionContainer>

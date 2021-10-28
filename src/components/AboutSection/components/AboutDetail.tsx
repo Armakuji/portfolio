@@ -60,9 +60,11 @@ const ProfileImageContainer = styled.div`
 const Experience = () => {
   return (
     <AboutDetailContainer>
-      <div className="text-center title">
-        <h1 className="title">About Me</h1>
-      </div>
+      <FadeInContainer>
+        <div className="text-center title">
+          <h1 className="title">About Me</h1>
+        </div>
+      </FadeInContainer>
 
       <Row align="middle" justify="center" gutter={[20, 40]} id="intro-fade">
         <Col xs={24} md={12}>
