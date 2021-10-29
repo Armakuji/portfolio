@@ -1,19 +1,13 @@
 import React from "react";
 import FadeInContainer from "components/FadeInContainer/FadeInContainer";
 import styled from "styled-components";
-import { Row, Col } from "antd";
+import { Row, Col } from "components/GlobalStyleComponent";
+
 import ProfileImage from "assets/images/profile_image.jpg";
 
 const AboutDetailContainer = styled.div`
   display: grid;
   justify-content: center;
-
-  @media (min-width: 1100px) {
-    .ant-row {
-      padding: 1em 2em;
-      max-width: 940px;
-    }
-  }
 
   .title {
     color: #454894;
@@ -32,17 +26,10 @@ const AboutDetailContainer = styled.div`
   }
 
   .about {
-    padding: 0.25em;
-  }
-
-  .ant-row {
-    display: flex;
-    justify-content: center;
-  }
-
-  .ant-col {
-    display: flex;
-    justify-content: center;
+    @media (max-width: 768px) {
+      gap: 40px;
+      margin-top: 2.5em;
+    }
   }
 `;
 
@@ -57,20 +44,57 @@ const ProfileImageContainer = styled.div`
   border-radius: 0.25em;
 `;
 
+const AboutRow = styled(Row)`
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+
+  width: 100%;
+  height: 100%;
+  min-width: 200px;
+  font-size: 1.2rem;
+
+  @media (min-width: 1100px) {
+    padding: 1em 2em;
+    max-width: 940px;
+  }
+`;
+
+const AboutCol = styled(Col)`
+  display: flex;
+  justify-content: center;
+  display: block;
+  flex: 0 0 100%;
+  max-width: 100%;
+
+  @media (min-width: 768px) {
+    display: block;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .fade-in-section {
+    display: flex;
+    justify-content: center;
+  }
+`;
+
 const Experience = () => {
   return (
     <AboutDetailContainer>
-      <div className="text-center title">
-        <h1 className="title">About Me</h1>
-      </div>
+      <FadeInContainer>
+        <div className="text-center title">
+          <h1 className="title">About Me</h1>
+        </div>
+      </FadeInContainer>
 
-      <Row align="middle" justify="center" gutter={[20, 40]} id="intro-fade">
-        <Col xs={24} md={12}>
+      <AboutRow>
+        <AboutCol>
           <FadeInContainer>
             <ProfileImageContainer />
           </FadeInContainer>
-        </Col>
-        <Col xs={24} md={12}>
+        </AboutCol>
+        <AboutCol>
           <FadeInContainer>
             <div className="about">
               <div>
@@ -81,16 +105,14 @@ const Experience = () => {
               </div>
               <br />
               <div>
-                <div>
-                  I like to create beautiful things on the Web. And now I'm
-                  studying Ethereum smart contracts, Blockchain, and
-                  Decentralized finance. &rdquo;
-                </div>
+                I like to create beautiful things on the Web. And now I'm
+                studying Ethereum smart contracts, Blockchain and Decentralized
+                finance. &rdquo;
               </div>
             </div>
           </FadeInContainer>
-        </Col>
-      </Row>
+        </AboutCol>
+      </AboutRow>
     </AboutDetailContainer>
   );
 };

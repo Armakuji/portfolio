@@ -1,41 +1,21 @@
 import React, { FC } from "react";
 import styled from "styled-components";
 import FadeInContainer from "components/FadeInContainer/FadeInContainer";
-import { Typography, Space } from "antd";
 import { ExperienceDetailType } from "utils/ExperienceList";
 import { ReactComponent as RightArrow } from "assets/svg/right_arrow.svg";
+import { IconSpace } from "components/GlobalStyleComponent";
 
 const ExperienceDetailContainer = styled.div`
-  margin: 2rem 1rem;
-  word-break: break-word;
+  margin-top: 2rem;
 
   .detail {
     padding-bottom: 1.5em;
-
-    .title {
-      color: white;
-      line-height: 1.25;
-      font-weight: 600;
-      font-size: 20px;
-    }
-
-    .ant-space {
-      padding-bottom: 0.25em;
-    }
-
-    .description {
-      margin-left: 1.5em;
-
-      span.ant-typography {
-        color: #a4a7c1;
-      }
-    }
   }
 `;
 
 const RightArrowColor = styled(RightArrow)`
-  height: 1em;
-  width: auto;
+  height: 20px;
+  width: 30px;
 
   path {
     stroke: #50fa7b;
@@ -43,7 +23,25 @@ const RightArrowColor = styled(RightArrow)`
   }
 `;
 
-const { Text } = Typography;
+const Title = styled.div`
+  color: #50fa7b;
+  color: white;
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 20px;
+`;
+
+const Text = styled.div`
+  color: #a4a7c1;
+  overflow-wrap: break-word;
+  margin-left: 1.4em;
+  padding-top: 0.5em;
+
+  @media (min-width: 768px) {
+    margin-left: 1.5em;
+    padding-top: 0em;
+  }
+`;
 
 interface ExperienceDetailProps {
   experienceList: ExperienceDetailType[];
@@ -57,12 +55,12 @@ const ExperienceDetail: FC<ExperienceDetailProps> = (props) => {
         return (
           <div className="detail" key={index}>
             <FadeInContainer>
-              <Text className="title">
-                <Space>
+              <Title>
+                <IconSpace>
                   <RightArrowColor />
                   {item.title}
-                </Space>
-              </Text>
+                </IconSpace>
+              </Title>
               <div className="description">
                 <Text>{item.description}</Text>
               </div>

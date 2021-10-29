@@ -1,9 +1,9 @@
 import React, { FC, useState } from "react";
-import { Row, Col } from "antd";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 import { ReactComponent as NavbarIcon } from "assets/svg/navbar_icon.svg";
 import { ReactComponent as Hamburgur } from "assets/svg/hamburgur.svg";
+import { Row, Col } from "components/GlobalStyleComponent";
 
 interface NavBarProps {
   isTop: boolean;
@@ -24,8 +24,6 @@ const NavBarWrapper = styled.div<NavBarProps>`
 
   padding-right: 4vw;
   padding-left: 4vw;
-  display: flex;
-  justify-content: center;
   position: fixed;
   z-index: 999;
     
@@ -41,10 +39,6 @@ const NavBarWrapper = styled.div<NavBarProps>`
     height: 100%;
     min-width: 200px;
     font-size: 1.2rem;
-  }
-
-  .ant-row {
-    padding: 0.5em 0;
   }
 
   .menu {
@@ -104,6 +98,18 @@ const NavBarIconColor = styled(NavbarIcon)<IconProps>`
   }
 `;
 
+const NavBarRow = styled(Row)`
+  padding: 0.5em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+  min-width: 200px;
+  font-size: 1.2rem;
+`;
+
 interface MenuSliderProps {
   setOpenMenu: (flag: boolean) => void;
 }
@@ -135,7 +141,7 @@ const NavBar: FC<MenuSliderProps> = (props) => {
       fontColor={fontColor}
       backgroundColor={backgroundColor}
     >
-      <Row justify="space-between" align="middle" className="nav">
+      <NavBarRow>
         <Col>
           <Link to="intro" spy={true} smooth={true} duration={scrollDuration}>
             <NavBarIconColor color={fontColor} />
@@ -169,7 +175,7 @@ const NavBar: FC<MenuSliderProps> = (props) => {
             <HamburgurColor color={fontColor} />
           </div>
         </Col>
-      </Row>
+      </NavBarRow>
     </NavBarWrapper>
   );
 };

@@ -5,7 +5,6 @@ export const languageList = [
   "CSS",
   "Java",
   "PHP",
-  "Solidity",
 ];
 
 export const libraryList = [
