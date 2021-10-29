@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import AboutDetail from "./components/AboutDetail";
-import SectionDevider from "components/SectionDevider/SectionDevider";
 import Skills from "./components/Skills/Skills";
-import { Card, CardBody } from "components/GlobalStyleComponent";
+import { Card, CardBody, Divider } from "components/GlobalStyleComponent";
 
 const AboutContainer = styled.div`
   background: #221b47;
@@ -22,13 +21,18 @@ const AboutContainer = styled.div`
   }
 `;
 
+const SectionDivider = styled(Divider)`
+  margin: 36px 0;
+  height: 2px;
+`;
+
 const AboutSection = () => {
   return (
     <AboutContainer id="about">
       <Card>
         <CardBody>
           <AboutDetail />
-          <SectionDevider />
+          <SectionDivider />
           <Skills />
         </CardBody>
       </Card>

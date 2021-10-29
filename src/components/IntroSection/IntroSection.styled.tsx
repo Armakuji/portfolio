@@ -40,14 +40,14 @@ export const Content = styled.div`
     opacity: 0.98;
     font-weight: bold;
     margin-bottom: 0;
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
 
   h2 {
     font-weight: bold;
     color: white;
     margin-bottom: 0;
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .sub-detail {
@@ -100,13 +100,6 @@ export const Content = styled.div`
     .sub-detail {
       max-width: 460px;
       font-size: 1.4em;
-    }
-  }
-
-  @media (min-width: 1000px) {
-    .ant-row {
-      min-width: unset;
-      width: 860px;
     }
   }
 `;

@@ -41,10 +41,6 @@ const NavBarWrapper = styled.div<NavBarProps>`
     font-size: 1.2rem;
   }
 
-  .ant-row {
-    padding: 0.5em 0;
-  }
-
   .menu {
     display: flex;
     justify-content: space-around;
